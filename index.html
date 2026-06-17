@@ -263,7 +263,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <!-- NAV -->
 <nav>
   <div class="nav-wordmark">Tafel<span>Plan</span></div>
-  <a href="file:///C:/Users/Gebruiker/Downloads/tafelplan_landing.html#aanmelden" class="nav-cta">Gratis proberen</a>
+  <a href="https://app.tafelplan.com" class="nav-cta">Gratis proberen</a>
 </nav>
 
 <!-- HERO -->
@@ -280,8 +280,8 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       De Nederlandse gezinsapp die maaltijdplanning, boodschappenlijst en budgetbewaking combineert — zodat het avondeten weer iets is om naar uit te kijken.
     </p>
     <div class="hero-actions">
-      <a href="file:///C:/Users/Gebruiker/Downloads/tafelplan_landing.html#aanmelden" class="btn-primary">7 dagen gratis proberen</a>
-      <a href="file:///C:/Users/Gebruiker/Downloads/tafelplan_landing.html#hoe-het-werkt" class="btn-secondary">Hoe werkt het?</a>
+      <a href="https://app.tafelplan.com" class="btn-primary">7 dagen gratis proberen</a>
+      <a href="#hoe-het-werkt" class="btn-secondary">Hoe werkt het?</a>
     </div>
   </div>
 </div>
@@ -563,7 +563,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
             <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Vaste terugkerende boodschappen
           </div>
         </div>
-        <a href="file:///C:/Users/Gebruiker/Downloads/tafelplan_landing.html#aanmelden" style="display:block;background:var(--gold);color:var(--forest);padding:14px;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;">Begin 7 dagen gratis</a>
+        <a href="https://app.tafelplan.com" style="display:block;background:var(--gold);color:var(--forest);padding:14px;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;">Begin 7 dagen gratis</a>
       </div>
       <p style="text-align:center;margin-top:16px;font-size:12px;color:rgba(254,250,224,0.28);">Maandelijks opzegbaar · geen verplichtingen</p>
     </div>
@@ -584,7 +584,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       <input type="email" id="cta-email" placeholder="jouw@emailadres.nl">
       <button onclick="ctaAanmelden()">Begin gratis</button>
     </div>
-    <p class="cta-disc">Of start direct via <a href="https://tafelplan-app.vercel.app/" style="color:var(--sage);">tafelplan-app.vercel.app</a></p>
+    <p class="cta-disc">Of start direct via <a href="https://app.tafelplan.com" style="color:var(--sage);">app.tafelplan.com</a></p>
   </div>
 </div>
 
@@ -647,12 +647,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* CTA */
 function ctaAanmelden() {
   const email = document.getElementById('cta-email').value;
-  const btn = document.querySelector('.cta-form button');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     document.getElementById('cta-email').style.borderColor='rgba(200,60,60,0.4)'; return;
   }
-  btn.textContent='✓ Geregistreerd'; btn.style.background='var(--sage)'; btn.style.color='white';
-  document.getElementById('cta-email').disabled=true;
+  window.location.href = 'https://app.tafelplan.com';
 }
 document.getElementById('cta-email').addEventListener('keypress', e => { if(e.key==='Enter') ctaAanmelden(); });
 </script>
