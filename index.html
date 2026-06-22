@@ -78,8 +78,8 @@ nav{
 
 .pijn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
 .pijn-stat{
-  background:rgba(254,250,224,0.03);
-  border:0.5px solid rgba(255,255,255,0.07);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(233,196,106,0.2);
   border-radius:14px;padding:24px 18px;text-align:center;
 }
 .pijn-num{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px;}
@@ -109,7 +109,7 @@ nav{
 .app-sub{font-size:16px;color:rgba(27,67,50,0.55);line-height:1.75;margin-bottom:32px;}
 .app-punten{display:flex;flex-direction:column;gap:14px;}
 .app-punt{display:flex;align-items:flex-start;gap:14px;}
-.ap-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+.ap-icon{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:var(--sage);flex-shrink:0;margin-top:3px;min-width:26px;letter-spacing:0.5px;}
 .ap-body{}
 .ap-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--forest);margin-bottom:2px;}
 .ap-desc{font-size:13px;color:rgba(27,67,50,0.52);line-height:1.6;}
@@ -357,28 +357,28 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   <div class="app-inner">
     <div class="app-text fade-left">
       <div class="sec-tag">De app</div>
-      <h2 class="sec-h">Alles in één.<br><em>Eindelijk.</em></h2>
+      <h2 class="sec-h">Alles in één.</h2>
       <div style="width:24px;height:1px;background:var(--gold2);margin:16px 0 22px;"></div>
       <p class="app-sub">
         Een kwartier op zondag. De rest van de week gewoon aan tafel — zonder discussie, zonder verrassingen aan de kassa.
       </p>
       <div class="app-punten">
         <div class="app-punt">
-          <span class="ap-icon">📅</span>
+          <span class="ap-icon">01</span>
           <div class="ap-body">
             <div class="ap-title">Weekplanning</div>
             <div class="ap-desc">Plan 1 tot 7 maaltijden per week uit 300+ recepten. Budget wordt live bijgewerkt terwijl je kiest.</div>
           </div>
         </div>
         <div class="app-punt">
-          <span class="ap-icon">🛒</span>
+          <span class="ap-icon">02</span>
           <div class="ap-body">
             <div class="ap-title">Boodschappenlijst automatisch</div>
             <div class="ap-desc">Alle ingrediënten samengevoegd en gesorteerd per categorie. Voeg vrije producten toe. Één rit naar de supermarkt.</div>
           </div>
         </div>
         <div class="app-punt">
-          <span class="ap-icon">💰</span>
+          <span class="ap-icon">03</span>
           <div class="ap-body">
             <div class="ap-title">Budgetbewaking live</div>
             <div class="ap-desc">Weet wat de week kost vóórdat je naar de winkel gaat. Maand- en jaaroverzichten bijgehouden.</div>
@@ -486,7 +486,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         </div>
         <div class="netto-rule"></div>
         <div class="netto-disc">Dit is wat Tafelplan kan doen — als jij de juiste keuzes maakt.</div>
-        <div class="netto-quote">"Al bij één minder impulsaankoop per maand heb je de kosten er al uit."</div>
+        <div class="netto-quote">"Al bij één impulsaankoop minder per maand heb je de kosten er al uit."</div>
       </div>
     </div>
   </div>
@@ -609,6 +609,14 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   <div class="footer-links">
     <a href="mailto:info@tafelplan.com">info@tafelplan.com</a>
     <a href="https://www.tafelplan.com/">www.tafelplan.com</a>
+    <a href="#">Privacy &amp; Cookies</a>
+    <a href="https://instagram.com/tafelplan" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
   </div>
   <div class="footer-copy">© 2026 Aerts Holding · Alle rechten voorbehouden</div>
 </footer>
