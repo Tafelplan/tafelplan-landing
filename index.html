@@ -188,25 +188,6 @@ nav{
 .price-check{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;color:var(--cream);}
 .price-check::before{content:'✓';color:var(--gold);font-weight:700;}
 
-/* ── CTA ── */
-.cta-sec{
-  position:relative;overflow:hidden;
-  background-image:url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=1400&quality=80');
-  background-size:cover;
-  background-position:center;
-  padding:120px 64px;
-}
-.cta-sec::before{content:'';position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0) 100%);}
-.cta-inner{position:relative;z-index:2;max-width:480px;margin:0;text-align:left;}
-.cta-h{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:500;color:#FEFAE0;line-height:1.1;margin-bottom:28px;}
-.cta-h em{color:var(--gold);font-style:italic;display:block;}
-.cta-sub{font-size:14px;color:rgba(254,250,224,0.5);line-height:1.7;margin-top:16px;}
-.cta-form{display:flex;gap:10px;max-width:420px;margin:0;flex-wrap:wrap;}
-.cta-form input{flex:1;min-width:200px;padding:14px 20px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--forest);background:white;outline:none;transition:border-color 0.2s;}
-.cta-form input:focus{border-color:var(--sage);}
-.cta-form button{padding:14px 28px;background:var(--gold);color:var(--forest);border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s,transform 0.15s;}
-.cta-form button:hover{background:#f0ce78;transform:translateY(-1px);}
-
 /* ── FOOTER ── */
 footer{background:var(--forest);padding:40px 64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-name{font-family:'Playfair Display',serif;font-size:28px;color:var(--cream);}
@@ -236,7 +217,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .nav-wordmark{font-size:24px;}
   .footer-name{font-size:24px;}
   .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.stat-inner,.how-inner,.calc-inner,.feat-inner,.price-inner{padding:0 24px;}
-  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.feat-sec,.price-sec,.cta-sec{padding:80px 24px;}
+  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.feat-sec,.price-sec{padding:80px 24px;}
   .how-sec{padding:80px 24px;}
   .pijn-grid,.steps,.features-grid,.calc-grid{grid-template-columns:1fr 1fr;}
   .stat-inner{grid-template-columns:1fr;gap:40px;}
@@ -252,7 +233,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .hero-line2{font-size:20px;}
   .hero-line3{font-size:17px;}
   footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
-  .cta-form{flex-direction:column;}
 }
 @media(max-width:600px){
   .features-grid,.calc-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
@@ -517,23 +497,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- 10. AFSLUITENDE CTA -->
-<div class="cta-sec" id="aanmelden">
-  <div class="cta-inner">
-    <h2 class="cta-h fade-up">
-      Rustige weken.
-      <em>Volle tafels.</em>
-    </h2>
-    <div class="cta-form fade-up">
-      <input type="email" id="cta-email" placeholder="jouw@emailadres.nl">
-      <button onclick="ctaAanmelden()">Begin gratis</button>
-    </div>
-    <p class="cta-sub fade-up">
-      7 dagen gratis proberen. Geen creditcard vereist. Opzegbaar wanneer je wilt.
-    </p>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-name">Tafel<span>Plan</span></div>
@@ -597,16 +560,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
   });
 });
-
-/* CTA */
-function ctaAanmelden() {
-  const email = document.getElementById('cta-email').value;
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    document.getElementById('cta-email').style.borderColor='rgba(200,60,60,0.4)'; return;
-  }
-  window.location.href = 'https://app.tafelplan.com';
-}
-document.getElementById('cta-email').addEventListener('keypress', e => { if(e.key==='Enter') ctaAanmelden(); });
 </script>
 
 </body></html>
