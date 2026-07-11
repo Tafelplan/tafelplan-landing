@@ -59,62 +59,50 @@ nav{
 .btn-secondary{background:rgba(254,250,224,0.08);border:0.5px solid rgba(254,250,224,0.2);color:var(--cream);padding:15px 32px;border-radius:100px;font-size:15px;text-decoration:none;transition:background 0.2s;}
 .btn-secondary:hover{background:rgba(254,250,224,0.14);}
 
-/* ── PIJN SECTIE ── */
-.pijn{background:var(--dark);padding:100px 64px;}
+/* ── HERKEN JE DIT? + STATISTIEKEN ── */
+.pijn{background:#1a1a1a;padding:100px 64px;}
 .pijn-inner{max-width:1100px;margin:0 auto;}
 .sec-tag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sage);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--sage);}
 .sec-h{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.1;margin-bottom:14px;letter-spacing:-0.3px;}
 .sec-h em{font-style:italic;}
 
-.pijn-verhaal{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(20px,2.5vw,26px);font-weight:300;
-  color:rgba(254,250,224,0.72);line-height:1.65;
-  max-width:760px;margin-bottom:52px;
-}
-.pijn-verhaal em{color:var(--gold);font-style:italic;}
-.pijn-verhaal strong{color:var(--cream);font-weight:400;}
+.herken-inner{max-width:700px;margin:0 auto 64px;text-align:center;}
+.herken-h{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:500;color:var(--cream);margin-bottom:36px;letter-spacing:-0.3px;}
+.herken-body{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.2vw,23px);font-weight:300;color:rgba(254,250,224,0.75);line-height:1.9;}
+.herken-body p{margin-bottom:22px;}
+.herken-body p:last-child{margin-bottom:0;}
 
-.pijn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+.pijn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:56px;}
 .pijn-stat{
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(233,196,106,0.2);
-  border-radius:14px;padding:24px 18px;text-align:center;
+  border-radius:14px;padding:28px 18px;text-align:center;
 }
-.pijn-num{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:8px;}
+.pijn-num{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:10px;}
 .pijn-num sup{font-size:0.45em;vertical-align:super;color:rgba(233,196,106,0.6);}
 .pijn-label{font-size:11px;color:rgba(254,250,224,0.35);line-height:1.55;}
 
-/* ── POSITIONERING QUOTE ── */
-.pos-quote-sec{background:var(--forest);padding:88px 64px;text-align:center;position:relative;overflow:hidden;}
-.pos-quote-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(233,196,106,0.06) 0%,transparent 70%);}
-.pos-quote-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;}
-.pos-quote-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:20px;display:flex;align-items:center;gap:10px;justify-content:center;}
-.pos-quote-label::before,.pos-quote-label::after{content:'';width:20px;height:1px;background:var(--sage);}
-.pos-q{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(26px,3.5vw,42px);font-weight:300;font-style:italic;
-  color:var(--cream);line-height:1.35;margin-bottom:20px;
-}
-.pos-q em{color:var(--gold);font-style:normal;}
-.pos-q-sub{font-size:15px;color:rgba(254,250,224,0.42);line-height:1.75;max-width:560px;margin:0 auto;}
+/* ── DE OPLOSSING ── */
+.oplossing-sec{background:var(--cream2);padding:96px 64px;text-align:center;}
+.oplossing-inner{max-width:760px;margin:0 auto;}
+.oplossing-sub{font-size:16px;color:rgba(27,67,50,0.55);line-height:1.75;max-width:600px;margin:16px auto 52px;}
+.kernpunten{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;}
+.kernpunt{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:180px;}
+.kernpunt-label{font-family:'Playfair Display',serif;font-size:15px;color:var(--forest);}
 
-/* ── APP PREVIEW ── */
-.app-sec{background:var(--cream2);padding:0;}
-.app-inner{max-width:1100px;margin:0 auto;padding:96px 64px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.app-text .sec-tag{color:var(--sage);}
-.app-text .sec-h{color:var(--forest);}
-.app-text .sec-h em{color:var(--gold2);}
-.app-sub{font-size:16px;color:rgba(27,67,50,0.55);line-height:1.75;margin-bottom:32px;}
-.app-punten{display:flex;flex-direction:column;gap:14px;}
-.app-punt{display:flex;align-items:flex-start;gap:14px;}
-.ap-icon{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;color:var(--sage);flex-shrink:0;margin-top:3px;min-width:26px;letter-spacing:0.5px;}
-.ap-body{}
-.ap-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--forest);margin-bottom:2px;}
-.ap-desc{font-size:13px;color:rgba(27,67,50,0.52);line-height:1.6;}
-.app-screens{border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(27,67,50,0.14);}
-.app-screens img{width:100%;display:block;}
+/* ── STAT-MOMENT €550 ── */
+.stat-sec{background:var(--cream);padding:96px 64px;}
+.stat-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.stat-big{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.2;color:var(--forest);}
+.stat-big .gold{color:var(--gold2);}
+.stat-source{font-size:12px;color:rgba(27,67,50,0.4);margin-top:20px;font-style:italic;}
+.stat-photo{
+  border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(27,67,50,0.14);
+  min-height:380px;
+  background-image:url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=900&quality=80');
+  background-size:cover;background-position:center 30%;
+}
 
 /* ── HOE HET WERKT ── */
 .how-sec{background:var(--forest);padding:96px 64px;}
@@ -167,68 +155,48 @@ nav{
 /* ── FEATURES ── */
 .feat-sec{background:var(--cream2);padding:96px 64px;}
 .feat-inner{max-width:1100px;margin:0 auto;}
-.feat-intro{max-width:560px;margin-bottom:52px;}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.feat-intro{max-width:560px;margin-bottom:56px;}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .feat-card{background:white;border:1px solid rgba(27,67,50,0.08);border-radius:16px;padding:26px 22px;transition:box-shadow 0.25s,transform 0.25s;}
 .feat-card:hover{box-shadow:0 8px 28px rgba(27,67,50,0.1);transform:translateY(-2px);}
 .feat-icon{font-size:26px;margin-bottom:12px;}
 .feat-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--forest);margin-bottom:6px;}
 .feat-desc{font-size:12px;color:rgba(27,67,50,0.52);line-height:1.7;}
 
-/* ── TESTIMONIALS ── */
-.testi-sec{background:var(--cream);padding:96px 64px;}
-.testi-inner{max-width:1100px;margin:0 auto;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;}
-.testi-card{background:white;border:1px solid rgba(27,67,50,0.08);border-radius:14px;padding:24px;}
-.testi-stars{color:var(--gold2);margin-bottom:10px;font-size:14px;}
-.testi-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--forest);line-height:1.5;margin-bottom:12px;}
-.testi-author{font-size:11px;color:rgba(27,67,50,0.42);}
-.testi-ph{opacity:0.35;border:1px dashed rgba(27,67,50,0.12);background:transparent;display:flex;align-items:center;justify-content:center;min-height:120px;}
-.testi-ph-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(27,67,50,0.28);text-align:center;}
-
 /* ── PRICING ── */
-.price-sec{background:var(--forest);padding:96px 64px;}
-.price-inner{max-width:1100px;margin:0 auto;text-align:center;}
-.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:560px;margin:48px auto 0;}
-.price-card{border-radius:16px;padding:28px;}
-.pc-founder{background:rgba(254,250,224,0.04);border:0.5px solid rgba(254,250,224,0.1);}
-.pc-launch{background:rgba(233,196,106,0.08);border:0.5px solid rgba(233,196,106,0.22);position:relative;}
-.pc-launch::before{content:'Aanbevolen';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--forest);font-size:10px;font-weight:500;padding:4px 14px;border-radius:100px;white-space:nowrap;}
-.pc-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
-.pc-founder .pc-tag{color:rgba(254,250,224,0.28);}
-.pc-launch .pc-tag{color:rgba(233,196,106,0.5);}
-.pc-price{font-family:'Playfair Display',serif;font-size:44px;font-weight:500;line-height:1;margin-bottom:4px;}
-.pc-founder .pc-price{color:var(--cream);}
-.pc-launch .pc-price{color:var(--gold);}
-.pc-period{font-size:12px;margin-bottom:16px;}
-.pc-founder .pc-period{color:rgba(254,250,224,0.32);}
-.pc-launch .pc-period{color:rgba(233,196,106,0.45);}
-.pc-rule{height:0.5px;background:rgba(255,255,255,0.08);margin-bottom:16px;}
-.pc-feat{display:flex;align-items:flex-start;gap:8px;font-size:12px;margin-bottom:8px;color:rgba(254,250,224,0.45);}
-.pc-feat::before{content:'✓';color:var(--sage);font-size:11px;flex-shrink:0;}
-.price-note{text-align:center;margin-top:20px;font-size:13px;color:rgba(254,250,224,0.28);}
-
-/* ── CTA ── */
-.cta-sec{
+.price-sec{
   position:relative;
   background:
-    linear-gradient(rgba(7,13,9,0.78),rgba(7,13,9,0.78)),
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
     url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=1400&quality=80');
   background-size:cover;
   background-position:center;
   padding:96px 64px;
-  text-align:center;
 }
-.cta-inner{max-width:560px;margin:0 auto;}
-.cta-h{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:500;color:#FEFAE0;line-height:1.1;margin-bottom:14px;}
+.price-inner{max-width:1100px;margin:0 auto;text-align:center;}
+.price-card-single{max-width:400px;margin:48px auto 0;background:rgba(255,255,255,0.06);border:0.5px solid rgba(233,196,106,0.25);border-radius:20px;padding:40px 32px;backdrop-filter:blur(4px);}
+.price-checks{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;}
+.price-check{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;color:var(--cream);}
+.price-check::before{content:'✓';color:var(--gold);font-weight:700;}
+
+/* ── CTA ── */
+.cta-sec{
+  position:relative;overflow:hidden;
+  background-image:url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=1400&quality=80');
+  background-size:cover;
+  background-position:center;
+  padding:120px 64px;
+}
+.cta-sec::before{content:'';position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0) 100%);}
+.cta-inner{position:relative;z-index:2;max-width:480px;margin:0;text-align:left;}
+.cta-h{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:500;color:#FEFAE0;line-height:1.1;margin-bottom:28px;}
 .cta-h em{color:var(--gold);font-style:italic;display:block;}
-.cta-sub{font-size:16px;color:rgba(254,250,224,0.62);line-height:1.7;margin-bottom:36px;}
-.cta-form{display:flex;gap:10px;max-width:420px;margin:0 auto 14px;flex-wrap:wrap;}
+.cta-sub{font-size:14px;color:rgba(254,250,224,0.5);line-height:1.7;margin-top:16px;}
+.cta-form{display:flex;gap:10px;max-width:420px;margin:0;flex-wrap:wrap;}
 .cta-form input{flex:1;min-width:200px;padding:14px 20px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--forest);background:white;outline:none;transition:border-color 0.2s;}
 .cta-form input:focus{border-color:var(--sage);}
 .cta-form button{padding:14px 28px;background:var(--gold);color:var(--forest);border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s,transform 0.15s;}
 .cta-form button:hover{background:#f0ce78;transform:translateY(-1px);}
-.cta-disc{font-size:12px;color:rgba(254,250,224,0.35);}
 
 /* ── FOOTER ── */
 footer{background:var(--forest);padding:40px 64px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
@@ -258,18 +226,18 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   nav{padding:14px 24px;}
   .nav-wordmark{font-size:24px;}
   .footer-name{font-size:24px;}
-  .hero-inner,.pijn-inner,.how-inner,.calc-inner,.feat-inner,.testi-inner,.price-inner{padding:0 24px;}
-  .pijn,.calc-sec,.feat-sec,.testi-sec,.price-sec,.cta-sec{padding:64px 24px;}
-  .how-sec{padding:64px 24px;}
-  .app-inner{grid-template-columns:1fr;padding:64px 24px;gap:40px;}
-  .pijn-grid,.steps,.features-grid,.testi-grid,.price-grid,.calc-grid{grid-template-columns:1fr 1fr;}
+  .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.stat-inner,.how-inner,.calc-inner,.feat-inner,.price-inner{padding:0 24px;}
+  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.feat-sec,.price-sec,.cta-sec{padding:80px 24px;}
+  .how-sec{padding:80px 24px;}
+  .pijn-grid,.steps,.features-grid,.calc-grid{grid-template-columns:1fr 1fr;}
+  .stat-inner{grid-template-columns:1fr;gap:40px;}
+  .kernpunten{gap:32px;}
   .hero-inner{padding:0 24px;max-width:100%;}
   footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
   .cta-form{flex-direction:column;}
 }
 @media(max-width:600px){
-  .features-grid,.testi-grid,.calc-grid,.price-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
-  .price-grid{max-width:100%;}
+  .features-grid,.calc-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -281,7 +249,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   <a href="https://app.tafelplan.com" class="nav-cta">Gratis proberen</a>
 </nav>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -300,16 +268,16 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- PIJN -->
+<!-- 2+3. HERKEN JE DIT? + STATISTIEKEN -->
 <div class="pijn">
   <div class="pijn-inner">
-    <div class="sec-tag fade-up anim-visible" style="color:var(--sage);">Herken je dit?</div>
-    <h2 class="sec-h fade-up anim-visible" style="color:var(--cream);margin-bottom:32px;">Het is kwart voor zes.<br><em style="color:var(--gold);">En niemand weet wat er op tafel komt.</em></h2>
-
-    <div class="pijn-verhaal fade-up anim-visible">
-      Je had het er al de hele dag druk mee. Werk, kinderen, van alles. En dan sta je in de keuken en begint het weer — <em>"wat eten we vanavond?"</em> Niemand heeft zin om te bedenken. Je opent de koelkast. Er ligt van alles, maar niets past samen. Je gooit straks weer iets weg.<br><br>
-      En het is niet zomaar een avond. Het is kwart over vijf, de kinderen worden moe, het wordt druk en jij staat nog niets te weten. Dus gooi je maar iets snels in de pan. Of je bestelt. Weer. <strong>Niet omdat je wil, maar omdat je geen energie meer hebt om iets te bedenken — laat staan nog een keer naar de supermarkt te gaan.</strong><br><br>
-      Je weet eigenlijk niet wat de boodschappen hebben gekost deze week. <em>Ergens rond de €180, denk je. Of was het €220?</em> Je bent drie keer naar de supermarkt geweest omdat je steeds iets vergat. En morgen begint het opnieuw.
+    <div class="herken-inner">
+      <h2 class="herken-h fade-up">Herken je dit?</h2>
+      <div class="herken-body fade-up">
+        <p>Je had het druk. Werk, kinderen, van alles. En dan sta je in de keuken — "wat eten we vanavond?" Niemand weet het. Je opent de koelkast. Er ligt van alles, maar niets past samen.</p>
+        <p>Kwart over vijf. De kinderen worden moe. Dus gooi je maar iets snels in de pan. Of je bestelt. Weer.</p>
+        <p>Je weet niet wat de boodschappen hebben gekost deze week. Ergens rond de €180, denk je. Of €220. Je bent drie keer geweest omdat je steeds iets vergat. En morgen begint het opnieuw.</p>
+      </div>
     </div>
 
     <div class="pijn-grid stagger">
@@ -337,65 +305,46 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- POSITIONERINGSQUOTE -->
-<div class="pos-quote-sec">
-  <div class="pos-quote-inner">
-    <div class="pos-quote-label fade-up">De Tafelplan-belofte</div>
-    <div class="pos-q fade-up">
-      "De meeste apps geven je receptinspiratie.<br>
-      Tafelplan geeft je <em>rust.</em>"
-    </div>
-    <p class="pos-q-sub fade-up">
-      Regie over wat er op tafel komt — en wat het kost — neemt de dagelijkse beslissingsmoeheid weg. Dat is geen bijeffect. Dat is de belofte.
+<!-- 4. DE OPLOSSING -->
+<div class="oplossing-sec">
+  <div class="oplossing-inner">
+    <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De oplossing</div>
+    <h2 class="sec-h fade-up" style="color:var(--forest);">Rustige weken.<br><em style="color:var(--gold2);">Volle tafels.</em></h2>
+    <p class="oplossing-sub fade-up">
+      Een kwartier op zondag. De rest van de week gewoon aan tafel — zonder discussie, zonder verrassingen aan de kassa.
     </p>
-  </div>
-</div>
-
-<!-- APP PREVIEW -->
-<div class="app-sec">
-  <div class="app-inner">
-    <div class="app-text fade-left">
-      <div class="sec-tag">De app</div>
-      <h2 class="sec-h">Alles in één.</h2>
-      <div style="width:24px;height:1px;background:var(--gold2);margin:16px 0 22px;"></div>
-      <p class="app-sub">
-        Een kwartier op zondag. De rest van de week gewoon aan tafel — zonder discussie, zonder verrassingen aan de kassa.
-      </p>
-      <div class="app-punten">
-        <div class="app-punt">
-          <span class="ap-icon">01</span>
-          <div class="ap-body">
-            <div class="ap-title">Weekplanning</div>
-            <div class="ap-desc">Plan 1 tot 7 maaltijden per week uit 300+ recepten. Budget wordt live bijgewerkt terwijl je kiest.</div>
-          </div>
-        </div>
-        <div class="app-punt">
-          <span class="ap-icon">02</span>
-          <div class="ap-body">
-            <div class="ap-title">Boodschappenlijst automatisch</div>
-            <div class="ap-desc">Alle ingrediënten samengevoegd en gesorteerd per categorie. Voeg vrije producten toe. Één rit naar de supermarkt.</div>
-          </div>
-        </div>
-        <div class="app-punt">
-          <span class="ap-icon">03</span>
-          <div class="ap-body">
-            <div class="ap-title">Budgetbewaking live</div>
-            <div class="ap-desc">Weet wat de week kost vóórdat je naar de winkel gaat. Maand- en jaaroverzichten bijgehouden.</div>
-          </div>
-        </div>
+    <div class="kernpunten stagger">
+      <div class="kernpunt">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <div class="kernpunt-label">Weekplanning in een kwartier</div>
       </div>
-    </div>
-    <div class="app-screens fade-right" style="background:var(--forest);border-radius:20px;min-height:360px;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 64px rgba(27,67,50,0.14);">
-      <div style="text-align:center;padding:40px;">
-        <div style="font-size:40px;margin-bottom:16px;">📱</div>
-        <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:18px;color:var(--gold);margin-bottom:8px;">App screenshots</div>
-        <div style="font-size:13px;color:rgba(254,250,224,0.38);line-height:1.7;">Echte app-schermen worden<br>hier geplaatst vóór lancering.</div>
+      <div class="kernpunt">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <div class="kernpunt-label">Boodschappenlijst automatisch</div>
+      </div>
+      <div class="kernpunt">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        <div class="kernpunt-label">Budget live bijgehouden</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- HOE HET WERKT -->
+<!-- 5. STAT-MOMENT €550 -->
+<div class="stat-sec">
+  <div class="stat-inner">
+    <div class="stat-text fade-left">
+      <div class="sec-tag" style="color:var(--sage);">Het effect</div>
+      <div class="stat-big">Gemiddeld <span class="gold">€550</span></div>
+      <div class="stat-big">minder voedselverspilling</div>
+      <div class="stat-big">per gezin, per jaar.</div>
+      <div class="stat-source">Bron: Voedingscentrum.</div>
+    </div>
+    <div class="stat-photo fade-right"></div>
+  </div>
+</div>
+
+<!-- 6. HOE HET WERKT -->
 <div class="how-sec" id="hoe-het-werkt">
   <div class="how-inner">
     <div class="sec-tag" style="color:var(--sage);">Hoe het werkt</div>
@@ -406,31 +355,74 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         <div class="step-num">01</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
         <div class="step-title">Maaltijden kiezen</div>
-        <div class="step-desc">Kies uit 300+ recepten. Budget wordt live bijgewerkt terwijl je kiest.</div>
+        <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="step-title">Lijst staat er automatisch</div>
-        <div class="step-desc">Ingrediënten samengevoegd, gesorteerd per categorie. Niets vergeten. Één rit.</div>
+        <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
         <div class="step-title">Budget live volgen</div>
-        <div class="step-desc">Weet wat de week kost vóór de winkel. Maand- en jaaroverzichten bijgehouden.</div>
+        <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
         <div class="step-title">Gewoon aan tafel</div>
-        <div class="step-desc">Geen discussie. Geen last-minute afhalen. Geen verrassingen aan de kassa.</div>
+        <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- REKENSOM -->
+<!-- 7. FEATURES -->
+<div class="feat-sec">
+  <div class="feat-inner">
+    <div class="feat-intro">
+      <div class="sec-tag">Alles inbegrepen</div>
+      <h2 class="sec-h fade-up">Alles inbegrepen.<br><em>Geen verborgen extra's.</em></h2>
+      <p class="fade-up" style="font-size:15px;color:rgba(27,67,50,0.52);line-height:1.75;margin-top:12px;">Geen verborgen extra's. Geen afgeslankte gratis versie. Alles wat je nodig hebt om de week te plannen, de boodschappen te doen en je budget bij te houden.</p>
+    </div>
+    <div class="features-grid stagger">
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="feat-title">300+ recepten</div>
+        <div class="feat-desc">Nederlandse recepten met prijsindicaties op basis van verschillende Nederlandse supermarkten. Altijd weten wat het kost.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+        <div class="feat-title">Slimme boodschappenlijst</div>
+        <div class="feat-desc">Automatisch gegenereerd uit je weekplanning. Gesorteerd per categorie. Vrije producten toevoegen.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="6" width="4" height="14" rx="1"/><rect x="16" y="9" width="4" height="11" rx="1"/></svg></div>
+        <div class="feat-title">Budgetoverzichten</div>
+        <div class="feat-desc">Week-, maand- en jaaroverzichten. Zie patronen en besparingen over tijd opbouwen.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div class="feat-title">Persoonlijk kookboek</div>
+        <div class="feat-desc">Eigen recepten toevoegen. Favorieten markeren. Jouw bibliotheek, opgebouwd over tijd.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <div class="feat-title">Vaste boodschappen</div>
+        <div class="feat-desc">Stel terugkerende producten in die automatisch elke week op je lijst staan.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="feat-title">Voor het hele gezin</div>
+        <div class="feat-desc">Portieberekeningen op maat. Plan voor 1 tot 8+ personen. De app past zich aan jouw gezin aan.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. REKENSOM -->
 <div class="calc-sec">
   <div class="calc-inner">
     <div class="sec-tag">De rekensom</div>
@@ -491,114 +483,36 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- FEATURES -->
-<div class="feat-sec">
-  <div class="feat-inner">
-    <div class="feat-intro">
-      <div class="sec-tag">Alles inbegrepen</div>
-      <h2 class="sec-h fade-up">Alles inbegrepen.<br><em>Geen verborgen extra's.</em></h2>
-      <p class="fade-up" style="font-size:15px;color:rgba(27,67,50,0.52);line-height:1.75;margin-top:12px;">Geen verborgen extra's. Geen afgeslankte gratis versie. Alles wat je nodig hebt om de week te plannen, de boodschappen te doen en je budget bij te houden.</p>
-    </div>
-    <div class="features-grid stagger">
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-        <div class="feat-title">300+ recepten</div>
-        <div class="feat-desc">Nederlandse recepten met prijsindicaties op basis van verschillende Nederlandse supermarkten. Altijd weten wat het kost.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
-        <div class="feat-title">Slimme boodschappenlijst</div>
-        <div class="feat-desc">Automatisch gegenereerd uit je weekplanning. Gesorteerd per categorie. Vrije producten toevoegen.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="6" width="4" height="14" rx="1"/><rect x="16" y="9" width="4" height="11" rx="1"/></svg></div>
-        <div class="feat-title">Budgetoverzichten</div>
-        <div class="feat-desc">Week-, maand- en jaaroverzichten. Zie patronen en besparingen over tijd opbouwen.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <div class="feat-title">Persoonlijk kookboek</div>
-        <div class="feat-desc">Eigen recepten toevoegen. Favorieten markeren. Jouw bibliotheek, opgebouwd over tijd.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
-        <div class="feat-title">Vaste boodschappen</div>
-        <div class="feat-desc">Stel terugkerende producten in die automatisch elke week op je lijst staan.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="feat-title">Voor het hele gezin</div>
-        <div class="feat-desc">Portieberekeningen op maat. Plan voor 1 tot 8+ personen. De app past zich aan jouw gezin aan.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TESTIMONIALS -->
-<div class="testi-sec">
-  <div class="testi-inner">
-    <div class="sec-tag">Wat gebruikers zeggen</div>
-    <h2 class="sec-h fade-up">Al een verschil<br><em>na één week.</em></h2>
-    <div class="testi-grid stagger">
-      <div class="testi-card testi-ph"><div class="testi-ph-label">Binnenkort · eerste gebruikerservaringen</div></div>
-      <div class="testi-card testi-ph"><div class="testi-ph-label">Binnenkort · eerste gebruikerservaringen</div></div>
-      <div class="testi-card testi-ph"><div class="testi-ph-label">Binnenkort · eerste gebruikerservaringen</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- PRICING -->
+<!-- 9. PRIJS -->
 <div class="price-sec">
   <div class="price-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">Prijs</div>
-    <h2 class="sec-h fade-up" style="color:var(--cream);margin-bottom:8px;">Eenvoudig.<br><em style="color:var(--gold);">Eerlijk.</em> Opzegbaar.</h2>
-    <p class="fade-up" style="font-size:15px;color:rgba(254,250,224,0.4);margin-bottom:44px;margin-top:12px;">7 dagen gratis proberen. Geen creditcard. Opzegbaar wanneer je wilt.</p>
-    <div style="max-width:380px;margin:0 auto;" class="fade-up">
-      <div style="background:rgba(233,196,106,0.08);border:0.5px solid rgba(233,196,106,0.22);border-radius:20px;padding:36px 32px;text-align:center;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(233,196,106,0.3),transparent);"></div>
-        <div style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(233,196,106,0.5);margin-bottom:14px;">Maandabonnement</div>
-        <div style="font-family:&#39;Playfair Display&#39;,serif;font-size:52px;font-weight:500;color:var(--gold);line-height:1;margin-bottom:4px;">€ 7,99</div>
-        <div style="font-size:13px;color:rgba(233,196,106,0.45);margin-bottom:24px;">per maand · na 7 dagen gratis</div>
-        <div style="height:0.5px;background:rgba(255,255,255,0.08);margin-bottom:20px;"></div>
-        <div style="display:flex;flex-direction:column;gap:10px;text-align:left;margin-bottom:24px;">
-          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(254,250,224,0.5);">
-            <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Weekplanning met 300+ recepten
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(254,250,224,0.5);">
-            <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Automatische boodschappenlijst
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(254,250,224,0.5);">
-            <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Live budgetbewaking
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(254,250,224,0.5);">
-            <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Persoonlijk kookboek
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13px;color:rgba(254,250,224,0.5);">
-            <span style="color:var(--sage);font-size:11px;flex-shrink:0;margin-top:1px;">✓</span>Vaste terugkerende boodschappen
-          </div>
-        </div>
-        <a href="https://app.tafelplan.com" style="display:block;background:var(--gold);color:var(--forest);padding:14px;border-radius:100px;font-family:&#39;DM Sans&#39;,sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:background 0.2s;">Begin 7 dagen gratis</a>
+    <h2 class="sec-h fade-up" style="color:var(--cream);">Voor minder dan één<br><em style="color:var(--gold);">afhaalmaaltijd per maand.</em></h2>
+    <div class="price-card-single fade-up">
+      <div class="price-checks">
+        <div class="price-check">€7,99 per maand</div>
+        <div class="price-check">7 dagen gratis proberen</div>
+        <div class="price-check">Maandelijks opzegbaar</div>
       </div>
-      <p style="text-align:center;margin-top:16px;font-size:12px;color:rgba(254,250,224,0.28);">Maandelijks opzegbaar · geen verplichtingen</p>
+      <a href="https://app.tafelplan.com" class="btn-primary" style="display:block;text-align:center;">Begin 7 dagen gratis</a>
     </div>
   </div>
 </div>
 
-<!-- CTA -->
+<!-- 10. AFSLUITENDE CTA -->
 <div class="cta-sec" id="aanmelden">
   <div class="cta-inner">
     <h2 class="cta-h fade-up">
       Rustige weken.
       <em>Volle tafels.</em>
     </h2>
-    <p class="cta-sub fade-up">
-      7 dagen gratis proberen. Geen creditcard vereist. Opzegbaar wanneer je wilt.
-    </p>
     <div class="cta-form fade-up">
       <input type="email" id="cta-email" placeholder="jouw@emailadres.nl">
       <button onclick="ctaAanmelden()">Begin gratis</button>
     </div>
-
+    <p class="cta-sub fade-up">
+      7 dagen gratis proberen. Geen creditcard vereist. Opzegbaar wanneer je wilt.
+    </p>
   </div>
 </div>
 
