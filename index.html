@@ -117,12 +117,27 @@ nav{
 /* ── HOE HET WERKT ── */
 .how-sec{background:var(--forest);padding:96px 64px;}
 .how-inner{max-width:1100px;margin:0 auto;}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
-.step{text-align:center;padding:24px 16px;background:rgba(254,250,224,0.03);border:0.5px solid rgba(255,255,255,0.06);border-radius:16px;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;align-items:start;}
+.step{position:relative;text-align:center;padding:24px 16px;background:rgba(254,250,224,0.03);border:0.5px solid rgba(255,255,255,0.06);border-radius:16px;transition:background 0.2s ease;}
+.step[data-expandable]{cursor:pointer;padding-bottom:44px;}
+.step[data-expandable]:hover{background:rgba(254,250,224,0.05);}
 .step-num{font-family:'Playfair Display',serif;font-size:48px;color:rgba(233,196,106,0.14);line-height:1;margin-bottom:10px;}
 .step-icon{font-size:26px;margin-bottom:10px;}
 .step-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
 .step-desc{font-size:12px;color:rgba(254,250,224,0.4);line-height:1.7;}
+
+.step-toggle{position:absolute;bottom:12px;right:12px;background:none;border:none;padding:6px;margin:0;cursor:pointer;color:rgba(254,250,224,0.35);display:flex;align-items:center;justify-content:center;}
+.step-toggle svg{display:block;transition:transform 0.3s ease;}
+.step.expanded .step-toggle svg{transform:rotate(180deg);}
+.step[data-expandable]:hover .step-toggle{color:rgba(233,196,106,0.7);}
+
+.step-details{max-height:0;overflow:hidden;transition:max-height 0.3s ease;text-align:left;}
+.step.expanded .step-details{max-height:320px;}
+.step-details-inner{border-top:1px solid rgba(233,196,106,0.3);margin-top:16px;padding-top:14px;}
+.step-detail-item{margin-bottom:10px;}
+.step-detail-item:last-child{margin-bottom:0;}
+.step-detail-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:500;color:var(--cream);margin-bottom:2px;}
+.step-detail-desc{font-size:13px;color:rgba(254,250,224,0.5);line-height:1.6;}
 
 /* ── REKENSOM ── */
 .calc-sec{background:var(--cream);padding:96px 64px;}
@@ -161,18 +176,6 @@ nav{
 .netto-rule{height:0.5px;background:rgba(255,255,255,0.08);}
 .netto-disc{font-size:11px;color:rgba(254,250,224,0.25);font-style:italic;line-height:1.6;}
 .netto-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(254,250,224,0.5);line-height:1.6;padding-top:4px;border-top:0.5px solid rgba(255,255,255,0.06);}
-
-/* ── FEATURES ── */
-.feat-sec{background:var(--cream2);padding:96px 64px;}
-.feat-inner{max-width:1100px;margin:0 auto;}
-.feat-intro{max-width:560px;margin-bottom:56px;}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.features-grid .feat-card:nth-child(1){grid-column:span 2;}
-.feat-card{background:white;border:1px solid rgba(27,67,50,0.08);border-radius:16px;padding:26px 22px;transition:box-shadow 0.25s,transform 0.25s;}
-.feat-card:hover{box-shadow:0 8px 28px rgba(27,67,50,0.1);transform:translateY(-2px);}
-.feat-icon{font-size:26px;margin-bottom:12px;}
-.feat-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--forest);margin-bottom:6px;}
-.feat-desc{font-size:12px;color:rgba(27,67,50,0.52);line-height:1.7;}
 
 /* ── PRICING ── */
 .price-sec{
@@ -218,11 +221,10 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   nav{padding:14px 24px;}
   .nav-wordmark{font-size:24px;}
   .footer-name{font-size:24px;}
-  .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.stat-inner,.how-inner,.calc-inner,.feat-inner,.price-inner{padding:0 24px;}
-  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.feat-sec,.price-sec{padding:80px 24px;}
+  .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.stat-inner,.how-inner,.calc-inner,.price-inner{padding:0 24px;}
+  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.price-sec{padding:80px 24px;}
   .how-sec{padding:80px 24px;}
-  .pijn-grid,.steps,.features-grid,.calc-grid{grid-template-columns:1fr 1fr;}
-  .features-grid .feat-card:nth-child(1){grid-column:span 1;}
+  .pijn-grid,.steps,.calc-grid{grid-template-columns:1fr 1fr;}
   .stat-inner{grid-template-columns:1fr;gap:40px;}
   .kernpunten{gap:32px;}
   .hero-inner{padding:0 24px;max-width:100%;}
@@ -238,7 +240,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
 }
 @media(max-width:600px){
-  .features-grid,.calc-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
+  .calc-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -354,67 +356,70 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
     <h2 class="sec-h fade-up" style="color:var(--cream);margin-bottom:6px;">Plan je week.<br><em style="color:var(--gold);">In vier stappen.</em></h2>
     <p class="fade-up" style="font-size:15px;color:rgba(254,250,224,0.42);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
     <div class="steps stagger">
-      <div class="step">
+      <div class="step" data-expandable>
         <div class="step-num">01</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
         <div class="step-title">Maaltijden kiezen</div>
         <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
+        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="step-details">
+          <div class="step-details-inner">
+            <div class="step-detail-item">
+              <div class="step-detail-title">300+ recepten</div>
+              <div class="step-detail-desc">Kies elke week uit een gevarieerde collectie. Altijd iets nieuws, altijd iets vertrouwds.</div>
+            </div>
+            <div class="step-detail-item">
+              <div class="step-detail-title">Persoonlijk kookboek</div>
+              <div class="step-detail-desc">Voeg eigen recepten toe en markeer je favorieten. Jouw bibliotheek, opgebouwd over tijd.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="step">
+      <div class="step" data-expandable>
         <div class="step-num">02</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="step-title">Lijst staat er automatisch</div>
         <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
+        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="step-details">
+          <div class="step-details-inner">
+            <div class="step-detail-item">
+              <div class="step-detail-title">Terugkerende boodschappen</div>
+              <div class="step-detail-desc">Producten die je altijd nodig hebt staan automatisch op je lijst. Nooit meer vergeten.</div>
+            </div>
+            <div class="step-detail-item">
+              <div class="step-detail-title">Geschatte kosten per recept en per week</div>
+              <div class="step-detail-desc">Gebaseerd op gemiddelde prijzen van Nederlandse supermarkten. Je weet wat je week kost voordat je de deur uitgaat.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="step">
+      <div class="step" data-expandable>
         <div class="step-num">03</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
         <div class="step-title">Budget live volgen</div>
         <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
+        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="step-details">
+          <div class="step-details-inner">
+            <div class="step-detail-item">
+              <div class="step-detail-title">Budgetoverzichten</div>
+              <div class="step-detail-desc">Week-, maand- en jaaroverzichten. Zie patronen en bouw inzicht op over tijd.</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
         <div class="step-title">Gewoon aan tafel</div>
         <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 7. FEATURES -->
-<div class="feat-sec">
-  <div class="feat-inner">
-    <div class="feat-intro">
-      <div class="sec-tag">Alles inbegrepen</div>
-      <h2 class="sec-h fade-up">Alles inbegrepen.</h2>
-      <p class="fade-up" style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:rgba(27,67,50,0.55);margin-top:8px;">Geen afgeslankte gratis versie. Geen verborgen extra's.</p>
-    </div>
-    <div class="features-grid stagger">
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-        <div class="feat-title">300+ recepten</div>
-        <div class="feat-desc">Kies elke week uit een gevarieerde collectie recepten. Altijd iets nieuws, altijd iets vertrouwds.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-        <div class="feat-title">Persoonlijk kookboek</div>
-        <div class="feat-desc">Voeg eigen recepten toe en markeer je favorieten. Jouw bibliotheek, opgebouwd over tijd.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
-        <div class="feat-title">Terugkerende boodschappen instellen</div>
-        <div class="feat-desc">Producten die je altijd nodig hebt staan automatisch op je lijst. Nooit meer vergeten.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8 8a2 2 0 0 0 2.828 0l7.172-7.172a2 2 0 0 0 0-2.828z"/><circle cx="7.5" cy="7.5" r="0.5" fill="var(--sage)" stroke="none"/></svg></div>
-        <div class="feat-title">Geschatte kosten per recept en per week</div>
-        <div class="feat-desc">Gebaseerd op gemiddelde prijzen van Nederlandse supermarkten. Je weet wat je week kost voordat je de deur uitgaat.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="6" width="4" height="14" rx="1"/><rect x="16" y="9" width="4" height="11" rx="1"/></svg></div>
-        <div class="feat-title">Budgetoverzichten (week, maand, jaar)</div>
-        <div class="feat-desc">Zie patronen, ontdek waar het geld naartoe gaat en bouw inzicht op over tijd.</div>
       </div>
     </div>
   </div>
@@ -558,6 +563,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+  });
+});
+
+/* Uitklapbare stap-details */
+document.querySelectorAll('.step[data-expandable]').forEach(step => {
+  const toggleBtn = step.querySelector('.step-toggle');
+  const toggle = () => {
+    const expanded = step.classList.toggle('expanded');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  };
+  step.setAttribute('tabindex', '0');
+  step.setAttribute('role', 'button');
+  step.addEventListener('click', toggle);
+  step.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
   });
 });
 </script>
