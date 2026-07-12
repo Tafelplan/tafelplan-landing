@@ -53,14 +53,11 @@ nav{
   rgba(15,12,10,0.00) 100%
 );}
 .hero-inner{position:relative;z-index:2;max-width:520px;margin:0;padding:0 24px 0 60px;text-align:left;}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;opacity:0;transform:translateY(12px);animation:slideUp 0.65s 0.35s cubic-bezier(0.22,1,0.36,1) forwards;}
-.hero-tag::before{content:'';width:18px;height:1px;background:var(--gold);}
-.hero-h1{font-family:'Playfair Display',serif;opacity:0;transform:translateY(18px);animation:slideUp 0.7s 0.55s cubic-bezier(0.22,1,0.36,1) forwards;}
-.hero-line1{display:block;font-size:52px;font-weight:500;font-style:normal;color:#fff;line-height:1.25;letter-spacing:-0.5px;margin-bottom:12px;}
-.hero-line2{display:block;font-size:26px;font-weight:300;color:#fff;line-height:1.25;margin-bottom:8px;}
-.hero-line3{display:block;font-size:21px;font-weight:400;font-style:italic;color:var(--gold);line-height:1.25;margin-bottom:40px;}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;opacity:0;transform:translateY(10px);animation:slideUp 0.65s 1.0s cubic-bezier(0.22,1,0.36,1) forwards;}
-.hero-disclaimer{font-size:13px;color:rgba(254,250,224,0.4);margin-top:16px;opacity:0;transform:translateY(8px);animation:slideUp 0.65s 1.15s cubic-bezier(0.22,1,0.36,1) forwards;}
+.hero-h1{font-family:'Playfair Display',serif;}
+.hero-line1{display:block;font-size:52px;font-weight:500;font-style:normal;color:#fff;line-height:1.25;letter-spacing:-0.5px;margin-bottom:12px;opacity:0;transform:translateY(20px);animation:slideUp 1.2s 0.3s cubic-bezier(0.25,0.1,0.25,1) forwards;}
+.hero-line2{display:block;font-size:26px;font-weight:300;color:#fff;line-height:1.25;margin-bottom:8px;opacity:0;transform:translateY(20px);animation:slideUp 1.0s 1.0s cubic-bezier(0.25,0.1,0.25,1) forwards;}
+.hero-line3{display:block;font-size:21px;font-weight:400;font-style:italic;color:var(--gold);line-height:1.25;margin-bottom:40px;opacity:0;transform:translateY(20px);animation:slideUp 1.0s 1.8s cubic-bezier(0.25,0.1,0.25,1) forwards;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;opacity:0;transform:translateY(20px);animation:slideUp 0.8s 2.6s cubic-bezier(0.25,0.1,0.25,1) forwards;}
 @keyframes slideUp{to{opacity:1;transform:translateY(0);}}
 
 .btn-primary{background:var(--gold);color:var(--forest);padding:15px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s,transform 0.15s;}
@@ -77,12 +74,12 @@ nav{
 .sec-h em{font-style:italic;}
 
 .herken-inner{max-width:680px;margin:0 auto 64px;text-align:center;}
-.herken-h{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:500;color:var(--cream);margin-bottom:36px;letter-spacing:-0.3px;}
-.herken-body{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:rgba(254,250,224,0.75);line-height:1.8;}
-.herken-body p{margin-bottom:22px;}
+.herken-quote{font-family:'Playfair Display',serif;font-size:48px;font-weight:500;color:#fff;line-height:1.3;margin-bottom:28px;letter-spacing:-0.3px;}
+.herken-body{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:rgba(254,250,224,0.8);line-height:1.7;max-width:600px;margin:0 auto;}
+.herken-body p{margin-bottom:16px;}
 .herken-body p:last-child{margin-bottom:0;}
 
-.pijn-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:56px;}
+.pijn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
 .pijn-stat{
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(233,196,106,0.2);
@@ -91,6 +88,8 @@ nav{
 .pijn-num{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--gold);line-height:1;margin-bottom:10px;}
 .pijn-num sup{font-size:0.45em;vertical-align:super;color:rgba(233,196,106,0.6);}
 .pijn-label{font-size:11px;color:rgba(254,250,224,0.35);line-height:1.55;}
+.pijn-dots{display:none;justify-content:center;gap:8px;margin-top:18px;}
+.pijn-dot{width:6px;height:6px;border-radius:50%;background:rgba(233,196,106,0.3);}
 
 /* ── DE OPLOSSING ── */
 .oplossing-sec{background:var(--cream2);padding:96px 64px;text-align:center;}
@@ -100,6 +99,15 @@ nav{
 .kernpunt{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:180px;}
 .kernpunt-label{font-family:'Playfair Display',serif;font-size:15px;color:var(--forest);}
 .oplossing-tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(26px,3.2vw,36px);color:var(--gold2);margin-top:52px;}
+
+/* ── SCREENSHOTS ── */
+.screenshots-sec{background:var(--cream);padding:96px 64px;text-align:center;}
+.screenshots-inner{max-width:1100px;margin:0 auto;}
+.screenshots-grid{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:48px;}
+.screenshot-mockup{position:relative;width:280px;height:560px;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);background:var(--cream2);flex-shrink:0;}
+.screenshot-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:13px;color:rgba(27,67,50,0.4);background:var(--cream2);}
+.screenshot-mockup img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.screenshot-mockup img[src=""]{display:none;}
 
 /* ── STAT-MOMENT €550 ── */
 .stat-sec{background:var(--cream);padding:96px 64px;}
@@ -118,26 +126,16 @@ nav{
 .how-sec{background:var(--forest);padding:96px 64px;}
 .how-inner{max-width:1100px;margin:0 auto;}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;align-items:start;}
-.step{position:relative;text-align:center;padding:24px 16px;background:rgba(254,250,224,0.03);border:0.5px solid rgba(255,255,255,0.06);border-radius:16px;transition:background 0.2s ease;}
-.step[data-expandable]{cursor:pointer;padding-bottom:44px;}
-.step[data-expandable]:hover{background:rgba(254,250,224,0.05);}
+.step{position:relative;text-align:center;padding:24px 20px;background:rgba(254,250,224,0.12);border:1px solid rgba(254,250,224,0.2);border-radius:16px;}
 .step-num{font-family:'Playfair Display',serif;font-size:48px;color:rgba(233,196,106,0.14);line-height:1;margin-bottom:10px;}
 .step-icon{font-size:26px;margin-bottom:10px;}
 .step-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
 .step-desc{font-size:12px;color:rgba(254,250,224,0.4);line-height:1.7;}
 
-.step-toggle{position:absolute;bottom:12px;right:12px;background:none;border:none;padding:6px;margin:0;cursor:pointer;color:rgba(254,250,224,0.35);display:flex;align-items:center;justify-content:center;}
-.step-toggle svg{display:block;transition:transform 0.3s ease;}
-.step.expanded .step-toggle svg{transform:rotate(180deg);}
-.step[data-expandable]:hover .step-toggle{color:rgba(233,196,106,0.7);}
-
-.step-details{max-height:0;overflow:hidden;transition:max-height 0.3s ease;text-align:left;}
-.step.expanded .step-details{max-height:320px;}
-.step-details-inner{border-top:1px solid rgba(233,196,106,0.3);margin-top:16px;padding-top:14px;}
-.step-detail-item{margin-bottom:10px;}
-.step-detail-item:last-child{margin-bottom:0;}
-.step-detail-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:500;color:var(--cream);margin-bottom:2px;}
-.step-detail-desc{font-size:13px;color:rgba(254,250,224,0.5);line-height:1.6;}
+.step-features{border-top:1px solid rgba(233,196,106,0.25);margin-top:16px;padding-top:14px;text-align:left;}
+.step-feature{position:relative;padding-left:14px;font-size:12px;color:rgba(254,250,224,0.55);line-height:1.6;margin-bottom:8px;}
+.step-feature:last-child{margin-bottom:0;}
+.step-feature::before{content:'–';position:absolute;left:0;color:var(--gold);}
 
 /* ── REKENSOM ── */
 .calc-sec{background:var(--cream);padding:96px 64px;}
@@ -188,7 +186,7 @@ nav{
   padding:96px 64px;
 }
 .price-inner{max-width:1100px;margin:0 auto;text-align:center;}
-.price-card-single{max-width:400px;margin:48px auto 0;background:rgba(255,255,255,0.06);border:0.5px solid rgba(233,196,106,0.25);border-radius:20px;padding:40px 32px;backdrop-filter:blur(4px);}
+.price-card-single{max-width:400px;margin:48px auto 0;background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:40px 32px;}
 .price-checks{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;}
 .price-check{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;color:var(--cream);}
 .price-check::before{content:'✓';color:var(--gold);font-weight:700;}
@@ -221,12 +219,13 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   nav{padding:14px 24px;}
   .nav-wordmark{font-size:24px;}
   .footer-name{font-size:24px;}
-  .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.stat-inner,.how-inner,.calc-inner,.price-inner{padding:0 24px;}
-  .pijn,.oplossing-sec,.stat-sec,.calc-sec,.price-sec{padding:80px 24px;}
+  .hero-inner,.pijn-inner,.herken-inner,.oplossing-inner,.screenshots-inner,.stat-inner,.how-inner,.calc-inner,.price-inner{padding:0 24px;}
+  .pijn,.oplossing-sec,.screenshots-sec,.stat-sec,.calc-sec,.price-sec{padding:80px 24px;}
   .how-sec{padding:80px 24px;}
-  .pijn-grid,.steps,.calc-grid{grid-template-columns:1fr 1fr;}
+  .steps,.calc-grid{grid-template-columns:1fr 1fr;}
   .stat-inner{grid-template-columns:1fr;gap:40px;}
   .kernpunten{gap:32px;}
+  .screenshots-grid{flex-direction:column;align-items:center;}
   .hero-inner{padding:0 24px;max-width:100%;}
   .hero-overlay{background:linear-gradient(
     to right,
@@ -237,10 +236,19 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .hero-line1{font-size:36px;}
   .hero-line2{font-size:20px;}
   .hero-line3{font-size:17px;}
+  .herken-quote{font-size:32px;}
+  .pijn-grid{
+    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:16px;margin-top:40px;padding-bottom:4px;
+    scrollbar-width:none;
+  }
+  .pijn-grid::-webkit-scrollbar{display:none;}
+  .pijn-stat{min-width:75vw;scroll-snap-align:center;flex-shrink:0;}
+  .pijn-dots{display:flex;}
   footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
 }
 @media(max-width:600px){
-  .calc-grid,.pijn-grid,.steps{grid-template-columns:1fr;}
+  .calc-grid,.steps{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -257,17 +265,14 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-tag">Nieuw · Nu beschikbaar</div>
     <h1 class="hero-h1">
       <span class="hero-line1">Wat eten we vanavond?</span>
       <span class="hero-line2">Niemand weet het. Weer niet.</span>
       <span class="hero-line3">En morgen is het weer precies hetzelfde.</span>
     </h1>
     <div class="hero-actions">
-      <a href="https://app.tafelplan.com" class="btn-primary">7 dagen gratis proberen</a>
       <a href="#hoe-het-werkt" class="btn-secondary">Hoe werkt het?</a>
     </div>
-    <p class="hero-disclaimer">Geen creditcard vereist. Opzegbaar wanneer je wilt.</p>
   </div>
 </div>
 
@@ -275,11 +280,9 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="pijn">
   <div class="pijn-inner">
     <div class="herken-inner">
-      <h2 class="herken-h fade-up">Herken je dit?</h2>
+      <h2 class="herken-quote fade-up">Kwart over vijf. De kinderen worden moe.<br>En jij staat in de keuken zonder idee.</h2>
       <div class="herken-body fade-up">
-        <p>Je had het druk vandaag. Werk, kinderen, van alles. En dan sta je in de keuken en begint het weer: "wat eten we vanavond?" Niemand weet het. Jij ook niet.</p>
-        <p>Je opent de koelkast. Er ligt van alles, maar niets past samen. Je hebt geen zin om na te denken. Dus gooi je maar iets snels in de pan. Of je bestelt. Weer.</p>
-        <p>Ergens weet je ook niet precies wat de boodschappen hebben gekost deze week. Drie keer naar de supermarkt omdat je steeds iets vergat.</p>
+        <p>Je opent de koelkast. Er ligt van alles, maar niets past samen. Dus gooi je maar iets snels in de pan. Of je bestelt. Weer.</p>
         <p>En morgen begint het opnieuw.</p>
       </div>
     </div>
@@ -294,17 +297,14 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         <div class="pijn-label">voedselverspilling<br>per gezin per jaar</div>
       </div>
       <div class="pijn-stat">
-        <div class="pijn-num">45<sup>%</sup></div>
-        <div class="pijn-label">heeft geen overzicht van<br>boodschappenuitgaven</div>
-      </div>
-      <div class="pijn-stat">
         <div class="pijn-num">€780</div>
-        <div class="pijn-label">gemiddeld per maand<br>boodschappen · gezin van 4</div>
+        <div class="pijn-label">gemiddeld per maand<br>aan boodschappen, gezin van 4</div>
       </div>
-      <div class="pijn-stat">
-        <div class="pijn-num">1×</div>
-        <div class="pijn-label">persoon draagt de hele<br>weekplanning — altijd</div>
-      </div>
+    </div>
+    <div class="pijn-dots">
+      <span class="pijn-dot"></span>
+      <span class="pijn-dot"></span>
+      <span class="pijn-dot"></span>
     </div>
   </div>
 </div>
@@ -335,97 +335,29 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- 5. STAT-MOMENT €550 -->
-<div class="stat-sec">
-  <div class="stat-inner">
-    <div class="stat-text fade-left">
-      <div class="sec-tag" style="color:var(--sage);">Het effect</div>
-      <div class="stat-big">Gemiddeld <span class="gold">€550</span></div>
-      <div class="stat-big">minder voedselverspilling</div>
-      <div class="stat-big">per gezin, per jaar.</div>
-      <div class="stat-source">Bron: Voedingscentrum.</div>
-    </div>
-    <div class="stat-photo fade-right"></div>
-  </div>
-</div>
-
-<!-- 6. HOE HET WERKT -->
-<div class="how-sec" id="hoe-het-werkt">
-  <div class="how-inner">
-    <div class="sec-tag" style="color:var(--sage);">Hoe het werkt</div>
-    <h2 class="sec-h fade-up" style="color:var(--cream);margin-bottom:6px;">Plan je week.<br><em style="color:var(--gold);">In vier stappen.</em></h2>
-    <p class="fade-up" style="font-size:15px;color:rgba(254,250,224,0.42);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
-    <div class="steps stagger">
-      <div class="step" data-expandable>
-        <div class="step-num">01</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
-        <div class="step-title">Maaltijden kiezen</div>
-        <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
-        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="step-details">
-          <div class="step-details-inner">
-            <div class="step-detail-item">
-              <div class="step-detail-title">300+ recepten</div>
-              <div class="step-detail-desc">Kies elke week uit een gevarieerde collectie. Altijd iets nieuws, altijd iets vertrouwds.</div>
-            </div>
-            <div class="step-detail-item">
-              <div class="step-detail-title">Persoonlijk kookboek</div>
-              <div class="step-detail-desc">Voeg eigen recepten toe en markeer je favorieten. Jouw bibliotheek, opgebouwd over tijd.</div>
-            </div>
-          </div>
-        </div>
+<!-- 5. SCREENSHOTS -->
+<div class="screenshots-sec">
+  <div class="screenshots-inner">
+    <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De app</div>
+    <h2 class="sec-h fade-up" style="color:var(--forest);">Zie het zelf.</h2>
+    <div class="screenshots-grid stagger">
+      <div class="screenshot-mockup">
+        <div class="screenshot-placeholder">Screenshot 1 — Dashboard</div>
+        <img src="" alt="Tafelplan dashboard screenshot">
       </div>
-      <div class="step" data-expandable>
-        <div class="step-num">02</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div class="step-title">Lijst staat er automatisch</div>
-        <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
-        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="step-details">
-          <div class="step-details-inner">
-            <div class="step-detail-item">
-              <div class="step-detail-title">Terugkerende boodschappen</div>
-              <div class="step-detail-desc">Producten die je altijd nodig hebt staan automatisch op je lijst. Nooit meer vergeten.</div>
-            </div>
-            <div class="step-detail-item">
-              <div class="step-detail-title">Geschatte kosten per recept en per week</div>
-              <div class="step-detail-desc">Gebaseerd op gemiddelde prijzen van Nederlandse supermarkten. Je weet wat je week kost voordat je de deur uitgaat.</div>
-            </div>
-          </div>
-        </div>
+      <div class="screenshot-mockup">
+        <div class="screenshot-placeholder">Screenshot 2 — Weekplanning</div>
+        <img src="" alt="Tafelplan weekplanning screenshot">
       </div>
-      <div class="step" data-expandable>
-        <div class="step-num">03</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
-        <div class="step-title">Budget live volgen</div>
-        <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
-        <button type="button" class="step-toggle" aria-expanded="false" aria-label="Meer details">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="step-details">
-          <div class="step-details-inner">
-            <div class="step-detail-item">
-              <div class="step-detail-title">Budgetoverzichten</div>
-              <div class="step-detail-desc">Week-, maand- en jaaroverzichten. Zie patronen en bouw inzicht op over tijd.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <div class="step-title">Gewoon aan tafel</div>
-        <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
+      <div class="screenshot-mockup">
+        <div class="screenshot-placeholder">Screenshot 3 — Boodschappenlijst</div>
+        <img src="" alt="Tafelplan boodschappenlijst screenshot">
       </div>
     </div>
   </div>
 </div>
 
-<!-- 8. REKENSOM -->
+<!-- 6. REKENSOM -->
 <div class="calc-sec">
   <div class="calc-inner">
     <div class="sec-tag">De rekensom</div>
@@ -481,6 +413,66 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         <div class="netto-rule"></div>
         <div class="netto-disc">Dit is wat Tafelplan kan doen — als jij de juiste keuzes maakt.</div>
         <div class="netto-quote">"Al bij één impulsaankoop minder per maand heb je de kosten er al uit."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. STAT-MOMENT €550 -->
+<div class="stat-sec">
+  <div class="stat-inner">
+    <div class="stat-text fade-left">
+      <div class="sec-tag" style="color:var(--sage);">Het effect</div>
+      <div class="stat-big">Gemiddeld <span class="gold">€550</span></div>
+      <div class="stat-big">minder voedselverspilling</div>
+      <div class="stat-big">per gezin, per jaar.</div>
+      <div class="stat-source">Bron: Voedingscentrum.</div>
+    </div>
+    <div class="stat-photo fade-right"></div>
+  </div>
+</div>
+
+<!-- 8. HOE HET WERKT -->
+<div class="how-sec" id="hoe-het-werkt">
+  <div class="how-inner">
+    <div class="sec-tag" style="color:var(--sage);">Hoe het werkt</div>
+    <h2 class="sec-h fade-up" style="color:var(--cream);margin-bottom:6px;">Plan je week.<br><em style="color:var(--gold);">In vier stappen.</em></h2>
+    <p class="fade-up" style="font-size:15px;color:rgba(254,250,224,0.42);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
+    <div class="steps stagger">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
+        <div class="step-title">Maaltijden kiezen</div>
+        <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
+        <div class="step-features">
+          <div class="step-feature">300+ recepten — kies elke week iets nieuws of vertrouwds</div>
+          <div class="step-feature">Persoonlijk kookboek — eigen recepten en favorieten</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="step-title">Lijst staat er automatisch</div>
+        <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
+        <div class="step-features">
+          <div class="step-feature">Terugkerende boodschappen — automatisch op je lijst elke week</div>
+          <div class="step-feature">Geschatte kosten per recept — gebaseerd op gemiddelde prijzen</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <div class="step-title">Budget live volgen</div>
+        <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
+        <div class="step-features">
+          <div class="step-feature">Budgetoverzichten — week, maand en jaar inzichtelijk</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="step-title">Gewoon aan tafel</div>
+        <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
       </div>
     </div>
   </div>
@@ -563,21 +555,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
-  });
-});
-
-/* Uitklapbare stap-details */
-document.querySelectorAll('.step[data-expandable]').forEach(step => {
-  const toggleBtn = step.querySelector('.step-toggle');
-  const toggle = () => {
-    const expanded = step.classList.toggle('expanded');
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-  };
-  step.setAttribute('tabindex', '0');
-  step.setAttribute('role', 'button');
-  step.addEventListener('click', toggle);
-  step.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
   });
 });
 </script>
