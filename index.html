@@ -74,6 +74,7 @@ nav{
 .sec-h em{font-style:italic;}
 
 .herken-inner{max-width:680px;margin:0 auto 64px;text-align:center;}
+.herken-opener{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#E9C46A;text-align:center;margin-bottom:16px;}
 .herken-quote{font-family:'Playfair Display',serif;font-size:48px;font-weight:500;color:#fff;line-height:1.3;margin-bottom:28px;letter-spacing:-0.3px;}
 .herken-body{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:rgba(254,250,224,0.8);line-height:1.7;max-width:600px;margin:0 auto;}
 .herken-body p{margin-bottom:16px;}
@@ -108,11 +109,11 @@ nav{
 .screenshot-mockup img{width:200px;height:auto;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.12);display:block;object-fit:contain;}
 
 /* ── STAT-MOMENT €550 ── */
-.stat-sec{background:var(--cream);padding:96px 64px;}
+.stat-sec{background:#1B4332;padding:96px 64px;}
 .stat-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.stat-big{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.2;color:var(--forest);}
-.stat-big .gold{color:var(--gold2);}
-.stat-source{font-size:12px;color:rgba(27,67,50,0.4);margin-top:20px;font-style:italic;}
+.stat-big{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.2;color:#FEFAE0;}
+.stat-big .gold{color:#E9C46A;}
+.stat-source{font-size:12px;color:rgba(254,250,224,0.6);margin-top:20px;font-style:italic;}
 .stat-photo{
   border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(27,67,50,0.14);
   min-height:380px;
@@ -121,17 +122,17 @@ nav{
 }
 
 /* ── HOE HET WERKT ── */
-.how-sec{background:var(--forest);padding:96px 64px;}
+.how-sec{background:#FEFAE0;padding:96px 64px;}
 .how-inner{max-width:1100px;margin:0 auto;}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;align-items:start;}
-.step{position:relative;text-align:center;padding:24px 20px;background:rgba(254,250,224,0.12);border:1px solid rgba(254,250,224,0.2);border-radius:16px;}
-.step-num{font-family:'Playfair Display',serif;font-size:48px;color:rgba(233,196,106,0.14);line-height:1;margin-bottom:10px;}
+.step{position:relative;text-align:center;padding:24px 20px;background:#ffffff;border:1px solid rgba(0,0,0,0.08);border-radius:16px;}
+.step-num{font-family:'Playfair Display',serif;font-size:48px;color:#1B4332;opacity:0.2;line-height:1;margin-bottom:10px;}
 .step-icon{font-size:26px;margin-bottom:10px;}
-.step-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
-.step-desc{font-size:12px;color:rgba(254,250,224,0.4);line-height:1.7;}
+.step-title{font-family:'Playfair Display',serif;font-size:17px;color:#1B4332;margin-bottom:6px;}
+.step-desc{font-size:12px;color:rgba(0,0,0,0.6);line-height:1.7;}
 
 .step-features{border-top:1px solid rgba(233,196,106,0.25);margin-top:16px;padding-top:14px;text-align:left;}
-.step-feature{position:relative;padding-left:14px;font-size:12px;color:rgba(254,250,224,0.55);line-height:1.6;margin-bottom:8px;}
+.step-feature{position:relative;padding-left:14px;font-size:12px;color:#40916C;line-height:1.6;margin-bottom:8px;}
 .step-feature:last-child{margin-bottom:0;}
 .step-feature::before{content:'–';position:absolute;left:0;color:var(--gold);}
 
@@ -271,7 +272,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       <span class="hero-line3">En morgen is het weer precies hetzelfde.</span>
     </h1>
     <div class="hero-actions">
-      <a href="#hoe-het-werkt" class="btn-secondary">Hoe werkt het?</a>
+      <a href="#hoe-het-werkt" class="btn-secondary">De oplossing →</a>
     </div>
   </div>
 </div>
@@ -280,6 +281,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="pijn">
   <div class="pijn-inner">
     <div class="herken-inner">
+      <div class="herken-opener fade-up">Herken je dit?</div>
       <h2 class="herken-quote fade-up">Kwart over vijf. De kinderen worden moe.<br>En jij staat in de keuken zonder idee.</h2>
       <div class="herken-body fade-up">
         <p>Je opent de koelkast. Er ligt van alles, maar niets past samen. Dus gooi je maar iets snels in de pan. Of je bestelt. Weer.</p>
@@ -313,7 +315,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="oplossing-sec">
   <div class="oplossing-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De oplossing</div>
-    <h2 class="sec-h fade-up" style="color:var(--forest);">Tafelplan neemt de dagelijkse vraag uit handen.</h2>
+    <h2 class="sec-h fade-up" style="color:var(--forest);">De week begint met een plan.<br><em style="color:#E9C46A;">Niet met een vraag.</em></h2>
     <p class="oplossing-sub fade-up">
       Tafelplan brengt je weekmenu, boodschappen en budget samen in één overzichtelijke app — zodat jij minder hoeft na te denken en meer ruimte hebt voor wat écht belangrijk is.
     </p>
@@ -339,7 +341,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="screenshots-sec">
   <div class="screenshots-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De app</div>
-    <h2 class="sec-h fade-up" style="color:var(--forest);">Zie het zelf.</h2>
+    <h2 class="sec-h fade-up" style="color:var(--forest);">Dit is Tafelplan.</h2>
     <div class="screenshots-grid stagger">
       <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-dashboard.webp?width=640&quality=85" alt="Tafelplan dashboard screenshot"></div>
       <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-weekplanning.webp?width=640&quality=85" alt="Tafelplan weekplanning screenshot"></div>
@@ -428,12 +430,12 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="how-sec" id="hoe-het-werkt">
   <div class="how-inner">
     <div class="sec-tag" style="color:var(--sage);">Hoe het werkt</div>
-    <h2 class="sec-h fade-up" style="color:var(--cream);margin-bottom:6px;">Plan je week.<br><em style="color:var(--gold);">In vier stappen.</em></h2>
-    <p class="fade-up" style="font-size:15px;color:rgba(254,250,224,0.42);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
+    <h2 class="sec-h fade-up" style="color:#1B4332;margin-bottom:6px;">Plan je week.<br><em style="color:#E9C46A;">In vier stappen.</em></h2>
+    <p class="fade-up" style="font-size:15px;color:rgba(0,0,0,0.6);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
     <div class="steps stagger">
       <div class="step">
         <div class="step-num">01</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
         <div class="step-title">Maaltijden kiezen</div>
         <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
         <div class="step-features">
@@ -443,7 +445,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="step-title">Lijst staat er automatisch</div>
         <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
         <div class="step-features">
@@ -453,7 +455,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
         <div class="step-title">Budget live volgen</div>
         <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
         <div class="step-features">
@@ -462,7 +464,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(254,250,224,0.5)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
         <div class="step-title">Gewoon aan tafel</div>
         <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
       </div>
