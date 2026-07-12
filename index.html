@@ -9,7 +9,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --forest:#1B4332;--forest2:#163828;--sage:#40916C;
-  --gold:#E9C46A;--gold2:#d4a84b;
+  --gold:#E9C46A;--gold2:#E9C46A;
   --cream:#FEFAE0;--cream2:#f5f0d0;--cream3:#ede8c8;
   --dark:#070d09;
 }
@@ -99,7 +99,7 @@ nav{
 .kernpunten{display:flex;justify-content:center;gap:56px;flex-wrap:wrap;}
 .kernpunt{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:180px;}
 .kernpunt-label{font-family:'Playfair Display',serif;font-size:15px;color:var(--forest);}
-.oplossing-tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(26px,3.2vw,36px);color:var(--gold2);margin-top:52px;}
+.oplossing-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(26px,3.2vw,36px);color:var(--gold2);margin-top:52px;}
 
 /* ── SCREENSHOTS ── */
 .screenshots-sec{background:var(--cream);padding:96px 64px;text-align:center;}
@@ -108,25 +108,20 @@ nav{
 .screenshot-mockup{width:200px;flex-shrink:0;}
 .screenshot-mockup img{width:200px;height:auto;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.12);display:block;object-fit:contain;}
 
-/* ── STAT-MOMENT €550 ── */
+/* ── HET EFFECT ── */
 .stat-sec{background:#1B4332;padding:96px 64px;}
-.stat-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.stat-big{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:500;line-height:1.2;color:#FEFAE0;}
-.stat-big .gold{color:#E9C46A;}
-.stat-source{font-size:12px;color:rgba(254,250,224,0.6);margin-top:20px;font-style:italic;}
-.stat-photo{
-  border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(27,67,50,0.14);
-  min-height:380px;
-  background-image:url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=900&quality=80');
-  background-size:cover;background-position:center 30%;
-}
+.stat-inner{max-width:1100px;margin:0 auto;}
+.effect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:48px;}
+.effect-col{border-left:2px solid rgba(233,196,106,0.4);padding-left:24px;}
+.effect-big{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.2;color:#E9C46A;margin-bottom:12px;}
+.effect-desc{font-size:14px;color:rgba(254,250,224,0.7);line-height:1.6;}
+.effect-source{font-size:12px;color:rgba(254,250,224,0.5);margin-top:16px;font-style:italic;}
 
 /* ── HOE HET WERKT ── */
 .how-sec{background:#FEFAE0;padding:96px 64px;}
 .how-inner{max-width:1100px;margin:0 auto;}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;align-items:start;}
 .step{position:relative;text-align:center;padding:24px 20px;background:#ffffff;border:1px solid rgba(0,0,0,0.08);border-radius:16px;}
-.step-num{font-family:'Playfair Display',serif;font-size:48px;color:#1B4332;opacity:0.2;line-height:1;margin-bottom:10px;}
 .step-icon{font-size:26px;margin-bottom:10px;}
 .step-title{font-family:'Playfair Display',serif;font-size:17px;color:#1B4332;margin-bottom:6px;}
 .step-desc{font-size:12px;color:rgba(0,0,0,0.6);line-height:1.7;}
@@ -222,7 +217,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .pijn,.oplossing-sec,.screenshots-sec,.stat-sec,.calc-sec,.price-sec{padding:80px 24px;}
   .how-sec{padding:80px 24px;}
   .steps,.calc-grid{grid-template-columns:1fr 1fr;}
-  .stat-inner{grid-template-columns:1fr;gap:40px;}
+  .effect-grid{grid-template-columns:1fr;gap:32px;}
   .kernpunten{gap:32px;}
   .screenshots-inner{padding:0;}
   .screenshot-mockup{width:150px;}
@@ -343,10 +338,10 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De app</div>
     <h2 class="sec-h fade-up" style="color:var(--forest);">Dit is Tafelplan.</h2>
     <div class="screenshots-grid stagger">
-      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-dashboard.webp?width=640&quality=85" alt="Tafelplan dashboard screenshot"></div>
-      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-weekplanning.webp?width=640&quality=85" alt="Tafelplan weekplanning screenshot"></div>
-      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-boodschappenlijst.webp?width=640&quality=85" alt="Tafelplan boodschappenlijst screenshot"></div>
-      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-budgetscherm.webp?width=640&quality=85" alt="Tafelplan budgetscherm screenshot"></div>
+      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-dashboard.webp?width=640&quality=85" alt="Tafelplan dashboard screenshot" onerror="this.style.background='#1B4332'; this.style.minHeight='400px';"></div>
+      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-weekplanning.webp?width=640&quality=85" alt="Tafelplan weekplanning screenshot" onerror="this.style.background='#1B4332'; this.style.minHeight='400px';"></div>
+      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-boodschappenlijst.webp?width=640&quality=85" alt="Tafelplan boodschappenlijst screenshot" onerror="this.style.background='#1B4332'; this.style.minHeight='400px';"></div>
+      <div class="screenshot-mockup"><img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-budgetscherm.webp?width=640&quality=85" alt="Tafelplan budgetscherm screenshot" onerror="this.style.background='#1B4332'; this.style.minHeight='400px';"></div>
     </div>
   </div>
 </div>
@@ -412,17 +407,25 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- 7. STAT-MOMENT €550 -->
+<!-- 7. HET EFFECT -->
 <div class="stat-sec">
   <div class="stat-inner">
-    <div class="stat-text fade-left">
-      <div class="sec-tag" style="color:var(--sage);">Het effect</div>
-      <div class="stat-big">Gemiddeld <span class="gold">€550</span></div>
-      <div class="stat-big">minder voedselverspilling</div>
-      <div class="stat-big">per gezin, per jaar.</div>
-      <div class="stat-source">Bron: Voedingscentrum.</div>
+    <div class="sec-tag fade-up" style="color:var(--sage);">Het effect</div>
+    <div class="effect-grid stagger">
+      <div class="effect-col">
+        <div class="effect-big">€550</div>
+        <div class="effect-desc">minder voedselverspilling<br>per gezin, per jaar.</div>
+        <div class="effect-source">Bron: Voedingscentrum.</div>
+      </div>
+      <div class="effect-col">
+        <div class="effect-big">Minder stress.</div>
+        <div class="effect-desc">Geen dagelijkse discussie meer<br>over wat er vanavond op tafel komt.</div>
+      </div>
+      <div class="effect-col">
+        <div class="effect-big">Één kwartier.</div>
+        <div class="effect-desc">Eén keer per week plannen.<br>De rest van de week gewoon aan tafel.</div>
+      </div>
     </div>
-    <div class="stat-photo fade-right"></div>
   </div>
 </div>
 
@@ -434,7 +437,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
     <p class="fade-up" style="font-size:15px;color:rgba(0,0,0,0.6);margin-bottom:0;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
     <div class="steps stagger">
       <div class="step">
-        <div class="step-num">01</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
         <div class="step-title">Maaltijden kiezen</div>
         <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
@@ -444,7 +446,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         </div>
       </div>
       <div class="step">
-        <div class="step-num">02</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="step-title">Lijst staat er automatisch</div>
         <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
@@ -454,7 +455,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         </div>
       </div>
       <div class="step">
-        <div class="step-num">03</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
         <div class="step-title">Budget live volgen</div>
         <div class="step-desc">Je ziet precies wat het kost, nog vóórdat je de winkel in loopt.</div>
@@ -463,7 +463,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         </div>
       </div>
       <div class="step">
-        <div class="step-num">04</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></div>
         <div class="step-title">Gewoon aan tafel</div>
         <div class="step-desc">Geen discussie meer. Gewoon samen aan tafel.</div>
