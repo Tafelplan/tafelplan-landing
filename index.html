@@ -103,11 +103,8 @@ nav{
 /* ── SCREENSHOTS ── */
 .screenshots-sec{background:var(--cream);padding:96px 64px;text-align:center;}
 .screenshots-inner{max-width:1100px;margin:0 auto;}
-.screenshots-grid{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:48px;}
-.screenshot-mockup{position:relative;width:280px;height:560px;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.12);background:var(--cream2);flex-shrink:0;}
-.screenshot-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:13px;color:rgba(27,67,50,0.4);background:var(--cream2);}
-.screenshot-mockup img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
-.screenshot-mockup img[src=""]{display:none;}
+.screenshots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+.screenshots-grid img{width:100%;display:block;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,0.12);}
 
 /* ── STAT-MOMENT €550 ── */
 .stat-sec{background:var(--cream);padding:96px 64px;}
@@ -225,7 +222,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .steps,.calc-grid{grid-template-columns:1fr 1fr;}
   .stat-inner{grid-template-columns:1fr;gap:40px;}
   .kernpunten{gap:32px;}
-  .screenshots-grid{flex-direction:column;align-items:center;}
+  .screenshots-grid{grid-template-columns:repeat(2,1fr);}
   .hero-inner{padding:0 24px;max-width:100%;}
   .hero-overlay{background:linear-gradient(
     to right,
@@ -341,18 +338,10 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De app</div>
     <h2 class="sec-h fade-up" style="color:var(--forest);">Zie het zelf.</h2>
     <div class="screenshots-grid stagger">
-      <div class="screenshot-mockup">
-        <div class="screenshot-placeholder">Screenshot 1 — Dashboard</div>
-        <img src="" alt="Tafelplan dashboard screenshot">
-      </div>
-      <div class="screenshot-mockup">
-        <div class="screenshot-placeholder">Screenshot 2 — Weekplanning</div>
-        <img src="" alt="Tafelplan weekplanning screenshot">
-      </div>
-      <div class="screenshot-mockup">
-        <div class="screenshot-placeholder">Screenshot 3 — Boodschappenlijst</div>
-        <img src="" alt="Tafelplan boodschappenlijst screenshot">
-      </div>
+      <img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-dashboard.webp?width=560&quality=80" alt="Tafelplan dashboard screenshot">
+      <img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-weekplanning.webp?width=560&quality=80" alt="Tafelplan weekplanning screenshot">
+      <img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-boodschappenlijst.webp?width=560&quality=80" alt="Tafelplan boodschappenlijst screenshot">
+      <img src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/Screenshot-budgetscherm.webp?width=560&quality=80" alt="Tafelplan budgetscherm screenshot">
     </div>
   </div>
 </div>
