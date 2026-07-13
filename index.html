@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tafelplan — Rustige weken. Volle tafels.</title>
 <link href="./Tafelplan Landing — Rustige weken. Volle tafels._files/css2" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -53,6 +54,10 @@ nav{
   rgba(15,12,10,0.00) 100%
 );}
 .hero-inner{position:relative;z-index:2;max-width:520px;margin:0;padding:0 24px 0 60px;text-align:left;}
+@media(min-width:769px){
+  .hero{flex-direction:row;align-items:center;}
+  .hero-inner{text-align:left;max-width:520px;padding-left:60px;}
+}
 .hero-h1{font-family:'Playfair Display',serif;}
 .hero-line1{display:block;font-size:52px;font-weight:500;font-style:normal;color:#fff;line-height:1.25;letter-spacing:-0.5px;margin-bottom:12px;opacity:0;transform:translateY(20px);animation:slideUp 1.2s 0.3s cubic-bezier(0.25,0.1,0.25,1) forwards;}
 .hero-line2{display:block;font-size:26px;font-weight:300;color:#fff;line-height:1.25;margin-bottom:8px;opacity:0;transform:translateY(20px);animation:slideUp 1.0s 1.0s cubic-bezier(0.25,0.1,0.25,1) forwards;}
@@ -313,7 +318,11 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 <div class="oplossing-sec" id="de-oplossing">
   <div class="oplossing-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De oplossing</div>
-    <h2 class="sec-h fade-up" style="color:var(--forest);">De week begint met een plan.<br><em style="color:#E9C46A;">Niet met een vraag.</em></h2>
+    <h2 class="sec-h fade-up" style="color:var(--forest);margin-bottom:0;">De week begint met een plan.</h2>
+    <div style="display: flex; justify-content: center; margin: 12px 0;">
+      <i class="ti ti-sparkles" style="font-size: 20px; color: #E9C46A; opacity: 0.8;" aria-hidden="true"></i>
+    </div>
+    <p class="sec-h fade-up" style="color:#E9C46A;font-style:italic;">Niet met een vraag.</p>
     <div style="display: flex; justify-content: center; margin: 20px 0;">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 3C12 3 8 7 8 10C8 12.2 9.8 14 12 14C14.2 14 16 12.2 16 10C16 7 12 3 12 3Z" fill="#E9C46A" opacity="0.7"/>
