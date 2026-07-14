@@ -38,14 +38,13 @@ nav{
 
 /* ── HERO ── */
 .hero{min-height:88vh;position:relative;overflow:hidden;display:flex;align-items:center;}
-.hero-bg{
-  position:absolute;inset:0;
-  background-image:url('https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/render/image/public/recepten-fotos/landing/hero-landing.webp?width=1400&quality=80&v=2');
-  background-size:cover;background-position:center 30%;
-  animation:heroBgZoom 14s ease-in-out infinite alternate;
+.hero-video{
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  z-index:0;
 }
-@keyframes heroBgZoom{0%{transform:scale(1);}100%{transform:scale(1.05);}}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(
   to right,
   rgba(15,12,10,0.95) 0%,
   rgba(15,12,10,0.88) 25%,
@@ -277,7 +276,16 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
 
 <!-- 1. HERO -->
 <div class="hero">
-  <div class="hero-bg"></div>
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/object/public/recepten-fotos/landing/hero-landing.webp"
+  >
+    <source src="https://zqnpzbfocxowywrwfveu.supabase.co/storage/v1/object/public/recepten-fotos/landing/hero-video.mp4" type="video/mp4">
+  </video>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <h1 class="hero-h1">
