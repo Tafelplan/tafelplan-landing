@@ -153,9 +153,8 @@ nav{
 .stat-inner{max-width:1100px;margin:0 auto;}
 .effect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:48px;}
 .effect-col{border-left:2px solid rgba(233,196,106,0.4);padding-left:24px;}
-.effect-big{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.2;color:#E9C46A;margin-bottom:12px;}
+.effect-big{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.2;color:var(--forest);margin-bottom:12px;}
 .effect-desc{font-size:14px;color:rgba(27,67,50,0.65);line-height:1.6;}
-.effect-source{font-size:12px;color:rgba(27,67,50,0.45);margin-top:16px;font-style:italic;}
 .effect-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:#E9C46A;text-align:center;margin-top:60px;padding-bottom:20px;}
 
 /* ── HOE HET WERKT ── */
@@ -179,7 +178,7 @@ nav{
 @media(min-width:769px){
   .calc-grid{grid-template-columns:60% 38%;}
 }
-.calc-card{background:white;border:1px solid rgba(27,67,50,0.08);border-radius:16px;overflow:hidden;}
+.calc-card{background:var(--cream);border:1px solid rgba(27,67,50,0.08);border-radius:16px;overflow:hidden;}
 .calc-head{background:var(--forest);padding:18px 22px;}
 .calc-head-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
 .calc-head-sub{font-size:12px;color:rgba(254,250,224,0.35);}
@@ -203,13 +202,13 @@ nav{
 .calc-emotie-label small{display:block;font-size:11px;color:rgba(27,67,50,0.4);margin-top:2px;font-style:italic;}
 .calc-emotie-val{font-size:12px;color:rgba(27,67,50,0.45);font-style:italic;white-space:nowrap;margin-left:12px;}
 
-.netto-card{background:var(--forest);border:1px solid rgba(254,250,224,0.15);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px;}
+.netto-card{background:var(--cream);border:1px solid rgba(27,67,50,0.08);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px;}
 .netto-item{}
 .netto-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:5px;}
 .netto-val{font-family:'Playfair Display',serif;font-size:30px;}
-.netto-val.muted{color:rgba(254,250,224,0.4);font-size:26px;}
+.netto-val.muted{color:rgba(27,67,50,0.4);font-size:26px;}
 .netto-val.highlight{color:var(--gold);}
-.netto-rule{height:0.5px;background:rgba(255,255,255,0.08);}
+.netto-rule{height:0.5px;background:rgba(27,67,50,0.08);}
 .netto-disc{font-size:11px;color:rgba(254,250,224,0.25);font-style:italic;line-height:1.6;}
 .netto-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(254,250,224,0.5);line-height:1.6;padding-top:4px;border-top:0.5px solid rgba(255,255,255,0.06);}
 
@@ -386,7 +385,46 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- 6. REKENSOM -->
+<!-- 6. HOE HET WERKT -->
+<div class="how-sec" id="hoe-het-werkt">
+  <div class="how-inner">
+    <div class="sec-header-center">
+      <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">Hoe het werkt</div>
+      <h2 class="sec-h fade-up" style="color:#1B4332;margin-bottom:6px;">Plan je week.<br><em>In drie stappen.</em></h2>
+      <p class="fade-up" style="font-size:15px;color:rgba(0,0,0,0.6);margin:0 auto;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
+    </div>
+    <div class="steps steps-stagger">
+      <div class="step">
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
+        <div class="step-title">Maaltijden kiezen</div>
+        <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
+        <div class="step-features">
+          <div class="step-feature">300+ recepten — kies elke week iets nieuws of vertrouwds</div>
+          <div class="step-feature">Persoonlijk kookboek — eigen recepten en favorieten</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="step-title">Lijst staat er automatisch</div>
+        <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
+        <div class="step-features">
+          <div class="step-feature">Terugkerende boodschappen — automatisch op je lijst elke week</div>
+          <div class="step-feature">Geschatte kosten per recept — gebaseerd op gemiddelde prijzen</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <div class="step-title">Budget live volgen</div>
+        <div class="step-desc">Krijg inzicht in wat je week ongeveer kost — voordat je naar de supermarkt gaat.</div>
+        <div class="step-features">
+          <div class="step-feature">Budgetoverzichten — week, maand en jaar inzichtelijk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. REKENSOM -->
 <div class="calc-sec">
   <div class="calc-inner">
     <div class="sec-header-center">
@@ -444,15 +482,14 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   </div>
 </div>
 
-<!-- 7. HET EFFECT -->
+<!-- 8. HET EFFECT -->
 <div class="stat-sec">
   <div class="stat-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">Het effect</div>
     <div class="effect-grid stagger">
       <div class="effect-col">
-        <div class="effect-big">€550</div>
-        <div class="effect-desc">minder voedselverspilling<br>per gezin, per jaar.</div>
-        <div class="effect-source">Bron: Voedingscentrum.</div>
+        <div class="effect-big">Grip op je budget</div>
+        <div class="effect-desc">Je weet vooraf wat de week ongeveer kost — geen impulsieve uitgaven meer.</div>
       </div>
       <div class="effect-col">
         <div class="effect-big">Minder stress.</div>
@@ -461,45 +498,6 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
       <div class="effect-col">
         <div class="effect-big">Meer tijd.</div>
         <div class="effect-desc">Minder losse ritjes naar de supermarkt.<br>Één keer plannen, één keer boodschappen.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 8. HOE HET WERKT -->
-<div class="how-sec" id="hoe-het-werkt">
-  <div class="how-inner">
-    <div class="sec-header-center">
-      <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">Hoe het werkt</div>
-      <h2 class="sec-h fade-up" style="color:#1B4332;margin-bottom:6px;">Plan je week.<br><em>In drie stappen.</em></h2>
-      <p class="fade-up" style="font-size:15px;color:rgba(0,0,0,0.6);margin:0 auto;max-width:480px;line-height:1.7;">Een kwartier op zondag. De rest van de week hoef je er niet meer over na te denken.</p>
-    </div>
-    <div class="steps steps-stagger">
-      <div class="step">
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
-        <div class="step-title">Maaltijden kiezen</div>
-        <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
-        <div class="step-features">
-          <div class="step-feature">300+ recepten — kies elke week iets nieuws of vertrouwds</div>
-          <div class="step-feature">Persoonlijk kookboek — eigen recepten en favorieten</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div class="step-title">Lijst staat er automatisch</div>
-        <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
-        <div class="step-features">
-          <div class="step-feature">Terugkerende boodschappen — automatisch op je lijst elke week</div>
-          <div class="step-feature">Geschatte kosten per recept — gebaseerd op gemiddelde prijzen</div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
-        <div class="step-title">Budget live volgen</div>
-        <div class="step-desc">Krijg inzicht in wat je week ongeveer kost — voordat je naar de supermarkt gaat.</div>
-        <div class="step-features">
-          <div class="step-feature">Budgetoverzichten — week, maand en jaar inzichtelijk</div>
-        </div>
       </div>
     </div>
   </div>
