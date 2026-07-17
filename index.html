@@ -92,26 +92,7 @@ nav{
 .btn-secondary:hover{background:rgba(254,250,224,0.14);}
 
 /* ── HERKEN JE DIT? + STATISTIEKEN ── */
-.pijn{
-  position:relative;
-  background-color:#0D1F17;
-  background-image:
-    radial-gradient(circle 260px at 15% 20%, rgba(64,145,108,0.35) 0%, rgba(64,145,108,0) 100%),
-    radial-gradient(circle 220px at 85% 15%, rgba(233,196,106,0.24) 0%, rgba(233,196,106,0) 100%),
-    radial-gradient(circle 300px at 50% 95%, rgba(28,46,38,0.55) 0%, rgba(28,46,38,0) 100%);
-  background-repeat:no-repeat;
-  background-size:115% 115%, 115% 115%, 115% 115%;
-  background-position:0% 0%, 100% 0%, 50% 100%;
-  animation:pijnMesh 17s ease-in-out infinite alternate;
-  padding:100px 64px;
-}
-@keyframes pijnMesh{
-  from{background-position:0% 0%, 100% 0%, 50% 100%;}
-  to{background-position:12% 14%, 88% 12%, 54% 88%;}
-}
-@media(prefers-reduced-motion:reduce){
-  .pijn{animation:none;}
-}
+.pijn{background:#0D1F17;padding:100px 64px;}
 .pijn-inner{max-width:1100px;margin:0 auto;}
 .sec-tag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sage);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--sage);}
@@ -155,12 +136,12 @@ nav{
 .screenshot-mockup img{width:220px;height:auto;display:block;border-radius:20px;object-fit:contain;background:transparent;}
 
 /* ── HET EFFECT ── */
-.stat-sec{background:var(--cream);padding:96px 64px;}
+.stat-sec{background:var(--forest);padding:96px 64px;}
 .stat-inner{max-width:1100px;margin:0 auto;}
 .effect-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:48px;}
 .effect-col{border-left:2px solid rgba(233,196,106,0.4);padding-left:24px;}
-.effect-big{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.2;color:var(--forest);margin-bottom:12px;}
-.effect-desc{font-size:14px;color:rgba(27,67,50,0.65);line-height:1.6;}
+.effect-big{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,40px);font-weight:500;line-height:1.2;color:#E9C46A;margin-bottom:12px;}
+.effect-desc{font-size:14px;color:rgba(254,250,224,0.7);line-height:1.6;}
 .effect-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:#E9C46A;text-align:center;margin-top:60px;padding-bottom:20px;}
 
 /* ── HOE HET WERKT ── */
@@ -172,11 +153,6 @@ nav{
 .step-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
 .step-desc{font-size:12px;color:rgba(254,250,224,0.7);line-height:1.7;}
 
-.step-features{border-top:1px solid rgba(233,196,106,0.25);margin-top:16px;padding-top:14px;text-align:left;}
-.step-feature{position:relative;padding-left:14px;font-size:12px;color:#40916C;line-height:1.6;margin-bottom:8px;}
-.step-feature:last-child{margin-bottom:0;}
-.step-feature::before{content:'–';position:absolute;left:0;color:var(--gold);}
-
 /* ── REKENSOM ── */
 .calc-sec{background:var(--forest);padding:96px 64px;}
 .calc-inner{max-width:1100px;margin:0 auto;}
@@ -186,8 +162,8 @@ nav{
 }
 .calc-card{background:var(--cream);border:1px solid rgba(27,67,50,0.08);border-radius:16px;overflow:hidden;}
 .calc-head{background:var(--forest);padding:18px 22px;}
-.calc-head-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
-.calc-head-sub{font-size:12px;color:rgba(254,250,224,0.35);}
+.calc-head-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#E9C46A;margin-bottom:3px;}
+.calc-head-sub{font-size:12px;color:#E9C46A;}
 .calc-body{padding:20px;}
 .calc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:0.5px solid rgba(27,67,50,0.07);}
 .calc-row:last-child{border-bottom:none;}
@@ -195,7 +171,7 @@ nav{
 .calc-val-g{font-size:13px;color:var(--sage);font-weight:500;}
 .calc-total{display:flex;justify-content:space-between;align-items:center;padding:12px 10px;background:rgba(64,145,108,0.07);border-radius:10px;margin-top:10px;}
 .calc-total-label{font-size:13px;color:var(--forest);font-weight:500;}
-.calc-total-val{font-family:'Playfair Display',serif;font-size:22px;color:var(--sage);}
+.calc-total-val{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1B4332;}
 
 /* Separator emotionele rij */
 .calc-sep{display:flex;align-items:center;gap:8px;padding:10px 0 6px;}
@@ -213,7 +189,7 @@ nav{
 .netto-label{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin-bottom:5px;}
 .netto-val{font-family:'Playfair Display',serif;font-size:30px;}
 .netto-val.muted{color:var(--sage);font-size:26px;}
-.netto-val.highlight{color:var(--sage);}
+.netto-val.highlight{color:#1B4332;font-size:34px;font-weight:700;}
 .netto-rule{height:0.5px;background:rgba(27,67,50,0.08);}
 .netto-disc{font-size:11px;color:rgba(254,250,224,0.25);font-style:italic;line-height:1.6;}
 .netto-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:rgba(254,250,224,0.5);line-height:1.6;padding-top:4px;border-top:0.5px solid rgba(255,255,255,0.06);}
@@ -368,7 +344,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   <div class="oplossing-inner">
     <div class="sec-tag fade-up" style="color:var(--sage);justify-content:center;">De oplossing</div>
     <h2 class="sec-h fade-up" style="color:var(--forest);margin-bottom:0;">De week begint met een plan.</h2>
-    <p class="sec-h fade-up" style="color:var(--sage);font-style:italic;">Niet met een vraag.</p>
+    <p class="sec-h fade-up" style="color:#1B4332;font-style:italic;">Niet met een vraag.</p>
     <div style="display: flex; justify-content: center; margin: 12px 0;">
       <i class="ti ti-sparkles" style="font-size: 20px; color: #E9C46A; opacity: 0.8;" aria-hidden="true"></i>
     </div>
@@ -405,27 +381,16 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6a2 2 0 0 0 2 2h3Z"/><path d="M21 15v7"/></svg></div>
         <div class="step-title">Maaltijden kiezen</div>
         <div class="step-desc">Kies wat je gezin deze week wil eten. Simpel als dat.</div>
-        <div class="step-features">
-          <div class="step-feature">300+ recepten — kies elke week iets nieuws of vertrouwds</div>
-          <div class="step-feature">Persoonlijk kookboek — eigen recepten en favorieten</div>
-        </div>
       </div>
       <div class="step">
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div class="step-title">Lijst staat er automatisch</div>
         <div class="step-desc">Alles staat klaar, netjes gesorteerd. Jij hoeft niets te onthouden.</div>
-        <div class="step-features">
-          <div class="step-feature">Terugkerende boodschappen — automatisch op je lijst elke week</div>
-          <div class="step-feature">Geschatte kosten per recept — gebaseerd op gemiddelde prijzen</div>
-        </div>
       </div>
       <div class="step">
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#40916C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
         <div class="step-title">Budget live volgen</div>
         <div class="step-desc">Krijg inzicht in wat je week ongeveer kost — voordat je naar de supermarkt gaat.</div>
-        <div class="step-features">
-          <div class="step-feature">Budgetoverzichten — week, maand en jaar inzichtelijk</div>
-        </div>
       </div>
     </div>
   </div>
