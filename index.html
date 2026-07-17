@@ -153,6 +153,19 @@ nav{
 .step-title{font-family:'Playfair Display',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
 .step-desc{font-size:12px;color:rgba(254,250,224,0.7);line-height:1.7;}
 
+.how-features{
+  margin-top:40px;
+  padding:28px 32px;
+  border:1px solid rgba(27,67,50,0.12);
+  border-radius:16px;
+  background:rgba(27,67,50,0.035);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px 32px;
+}
+.how-feature{display:flex;align-items:center;gap:10px;font-size:14px;color:#1B4332;}
+.how-feature::before{content:'✓';color:#40916C;font-weight:700;flex-shrink:0;}
+
 /* ── REKENSOM ── */
 .calc-sec{background:var(--forest);padding:96px 64px;}
 .calc-inner{max-width:1100px;margin:0 auto;}
@@ -246,6 +259,7 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
   .how-sec{padding:80px 24px;}
   .calc-grid{grid-template-columns:1fr 1fr;}
   .steps{grid-template-columns:1fr;}
+  .how-features{grid-template-columns:1fr;padding:24px;}
   .effect-grid{grid-template-columns:1fr;gap:32px;}
   .effect-tagline{font-size:24px;}
   .kernpunten{gap:32px;}
@@ -392,6 +406,14 @@ footer{background:var(--forest);padding:40px 64px;display:flex;align-items:cente
         <div class="step-title">Budget live volgen</div>
         <div class="step-desc">Krijg inzicht in wat je week ongeveer kost — voordat je naar de supermarkt gaat.</div>
       </div>
+    </div>
+    <div class="how-features fade-up">
+      <div class="how-feature">300+ recepten om uit te kiezen</div>
+      <div class="how-feature">Persoonlijk kookboek met eigen favorieten</div>
+      <div class="how-feature">Boodschappenlijst automatisch bijgewerkt</div>
+      <div class="how-feature">Vaste producten naast recepten inplannen</div>
+      <div class="how-feature">Geschatte kosten per recept</div>
+      <div class="how-feature">Budgetoverzicht per week, maand en jaar</div>
     </div>
   </div>
 </div>
