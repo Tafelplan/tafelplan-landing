@@ -86,7 +86,26 @@ nav{
 .btn-secondary:hover{background:rgba(254,250,224,0.14);}
 
 /* ── HERKEN JE DIT? + STATISTIEKEN ── */
-.pijn{background:#1a1a1a;padding:100px 64px;}
+.pijn{
+  position:relative;
+  background-color:#0D1F17;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(64,145,108,0.35) 0%, rgba(64,145,108,0) 45%),
+    radial-gradient(circle at 85% 15%, rgba(233,196,106,0.15) 0%, rgba(233,196,106,0) 40%),
+    radial-gradient(circle at 50% 95%, rgba(28,46,38,0.55) 0%, rgba(28,46,38,0) 50%);
+  background-repeat:no-repeat;
+  background-size:160% 160%, 160% 160%, 160% 160%;
+  background-position:0% 0%, 100% 0%, 50% 100%;
+  animation:pijnMesh 17s ease-in-out infinite alternate;
+  padding:100px 64px;
+}
+@keyframes pijnMesh{
+  from{background-position:0% 0%, 100% 0%, 50% 100%;}
+  to{background-position:12% 14%, 88% 12%, 54% 88%;}
+}
+@media(prefers-reduced-motion:reduce){
+  .pijn{animation:none;}
+}
 .pijn-inner{max-width:1100px;margin:0 auto;}
 .sec-tag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sage);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
 .sec-tag::before{content:'';width:18px;height:1px;background:var(--sage);}
